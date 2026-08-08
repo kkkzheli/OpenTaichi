@@ -1710,103 +1710,87 @@
 .end method
 
 .method public static create(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)Lme/weishu/exp/persistence/ExpApp;
-    .locals 5
+    .locals 10
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lme/weishu/exp/core/CreateFailedException;
         }
     .end annotation
 
-    const/4 v1, 0x0
+    # kkkzheli: fully offline create - bypass JNI nativeCreate, build ExpApp from PackageManager directly
+    # p1 = apk file path (String), p2 = split APK paths (Object/String[])
 
-    const-string v0, "\u06e2\u06da\u06d7\u06df\u06dc\u06e1\u06ec\u06e8\u06d6\u06d9\u06ec\u06df\u06e4\u06d9\u06e1\u06db\u06dc\u06d9\u06e6\u06ec\u06dc\u06d8\u06e1\u06e1\u06dc\u06d8"
-
-    :goto_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    const/16 v3, 0x1e6
-
-    const v4, -0x75d85340
-
-    xor-int/2addr v2, v3
-
-    xor-int/2addr v2, v4
-
-    sparse-switch v2, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v0, "\u06d9\u06eb\u06e4\u06df\u06e1\u06d6\u06e4\u06db\u06e1\u06e1\u06d8\u06d8\u06d8\u06dc\u06e2\u06da\u06e5\u06e5\u06d8\u06e8\u06e6\u06d9"
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "\u06d7\u06d8\u06e1\u06d8\u06d9\u06e2\u06dc\u06e2\u06da\u06d7\u06e1\u06dc\u06e6\u06d8\u06dc\u06dc\u06e2\u06eb\u06e2\u06e4\u06e2\u06e1\u06dc\u06d8"
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "\u06d7\u06ec\u06d7\u06dc\u06ec\u06d6\u06d7\u06e4\u06dc\u06d8\u06e0\u06e0\u06df\u06d9\u06df\u06e5\u06d8\u06d6\u06e6\u06df"
-
-    goto :goto_0
-
-    :sswitch_3
+    # Step 1: Ensure APK file exists
     invoke-static {p1}, Lme/weishu/exp/util/IOUtils;->ensureExists(Ljava/lang/String;)Ljava/io/File;
 
-    const-string v0, "\u06d7\u06dc\u06e4\u06df\u06ec\u06e8\u06df\u06d6\u06d8\u06df\u06dc\u06db\u06e5\u06e2\u06d6\u06eb\u06d9\u06e4\u06d8\u06df\u06e2\u06dc\u06da\u06e8\u06d8"
+    # Step 2: Get PackageManager
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    move-result-object v0
 
-    goto :goto_0
+    # Step 3: Parse APK archive info to get package name and version
+    const/4 v1, 0x0
+    invoke-virtual {v0, p1, v1}, Landroid/content/pm/PackageManager;->getPackageArchiveInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    move-result-object v2
 
-    :sswitch_4
-    invoke-static {}, Lexp/aoh;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo()V
+    if-nez v2, :cond_error
+    const-string v3, "APK parse failed"
+    new-instance v4, Lme/weishu/exp/core/CreateFailedException;
+    invoke-direct {v4, v3}, Lme/weishu/exp/core/CreateFailedException;-><init>(Ljava/lang/String;)V
+    throw v4
 
-    const-string v0, "\u06e7\u06e5\u06d8\u06e0\u06e1\u06dc\u06d8\u06e0\u06e5\u06e1\u06dc\u06e4\u06e8\u06d8\u06df\u06e5\u06eb\u06d6\u06e4\u06e8\u06d8\u06d6\u06e8\u06eb\u06e6\u06e4\u06e5"
+    :cond_error
+    # Step 4: Create ExpApp entity
+    new-instance v3, Lme/weishu/exp/persistence/ExpApp;
+    invoke-direct {v3}, Lme/weishu/exp/persistence/ExpApp;-><init>()V
 
-    goto :goto_0
+    # Set package name
+    iget-object v4, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lme/weishu/exp/persistence/ExpApp;->setPackageName(Ljava/lang/String;)V
 
-    :sswitch_5
-    invoke-static {p0, p1, p2}, Lme/weishu/exp/core/Creator;->nativeCreate(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)Lme/weishu/exp/persistence/ExpApp;
+    # Set version code
+    iget v4, v2, Landroid/content/pm/PackageInfo;->versionCode:I
+    invoke-virtual {v3, v4}, Lme/weishu/exp/persistence/ExpApp;->setVersionCode(I)V
 
-    move-result-object v1
+    # Set version name
+    iget-object v4, v2, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lme/weishu/exp/persistence/ExpApp;->setVersionName(Ljava/lang/String;)V
 
-    const-string v0, "\u06dc\u06d8\u06e6\u06df\u06d8\u06e8\u06d8\u06e7\u06df\u06ec\u06d6\u06d8\u06da\u06e4\u06e4\u06e6\u06e2\u06eb\u06d6\u06d8\u06e5\u06e7\u06dc\u06e6\u06ec\u06e1\u06e1\u06d8\u06e8\u06d8"
+    # Set source paths
+    invoke-virtual {v3, p1}, Lme/weishu/exp/persistence/ExpApp;->setOriginalSource(Ljava/lang/String;)V
+    invoke-virtual {v3, p1}, Lme/weishu/exp/persistence/ExpApp;->setExpSource(Ljava/lang/String;)V
 
-    goto :goto_0
+    # Generate backup name
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+    move-result-object v4
+    invoke-virtual {v4}, Ljava/util/UUID;->toString()Ljava/lang/String;
+    move-result-object v4
+    invoke-virtual {v3, v4}, Lme/weishu/exp/persistence/ExpApp;->setBackupName(Ljava/lang/String;)V
 
-    :sswitch_6
-    invoke-static {v1, p1, p0}, Lme/weishu/exp/core/Creator;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Lme/weishu/exp/persistence/ExpApp;Ljava/lang/String;Landroid/content/Context;)V
+    # Set status to a default state
+    sget-object v4, Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo:Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;
+    invoke-virtual {v3, v4}, Lme/weishu/exp/persistence/ExpApp;->setStatus(Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;)V
 
-    const-string v0, "\u06e1\u06e0\u06da\u06e0\u06df\u06e5\u06e2\u06e0\u06df\u06e4\u06e5\u06d7\u06e7\u06ec\u06e6\u06d7\u06dc\u06d6\u06d8\u06dc\u06e4\u06d6"
+    # Set isExpApp to false (not yet modified)
+    invoke-virtual {v3, v1}, Lme/weishu/exp/persistence/ExpApp;->setExpApp(Z)V
 
-    goto :goto_0
+    # Step 5: Load display name
+    :try_start_0
+    iget-object v4, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    if-eqz v4, :cond_skip_label
+    invoke-virtual {v4, v0}, Landroid/content/pm/ApplicationInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+    move-result-object v5
+    invoke-interface {v5}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    move-result-object v5
+    invoke-virtual {v3, v5}, Lme/weishu/exp/persistence/ExpApp;->setDisplayName(Ljava/lang/String;)V
+    :cond_skip_label
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    :sswitch_7
-    invoke-static {}, Lexp/aoh;->O0oo0oO00o00oo0o0000o00o000o00o00o00oO()V
+    return-object v3
 
-    const-string v0, "\u06e2\u06d9\u06db\u06dc\u06da\u06db\u06e5\u06dc\u06e1\u06d9\u06e1\u06e7\u06e2\u06d7\u06df"
-
-    goto :goto_0
-
-    :sswitch_8
-    return-object v1
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x4b4bc14b -> :sswitch_4
-        -0x1b520b3e -> :sswitch_3
-        0xb095a12 -> :sswitch_5
-        0x16ee67fa -> :sswitch_8
-        0x1d992ee4 -> :sswitch_6
-        0x7011c9de -> :sswitch_1
-        0x78bdbe91 -> :sswitch_2
-        0x79098d27 -> :sswitch_0
-        0x7a637260 -> :sswitch_7
-    .end sparse-switch
+    :catch_0
+    move-exception v4
+    return-object v3
 .end method
 
 .method private static deleteOriginalSignatures(Ljava/io/File;)V
@@ -2739,223 +2723,9 @@
 .end method
 
 .method public static magiskAddApps(Ljava/util/Collection;)Ljava/util/Collection;
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Collection",
-            "<",
-            "Lme/weishu/exp/persistence/ExpApp;",
-            ">;)",
-            "Ljava/util/Collection",
-            "<",
-            "Lme/weishu/exp/persistence/ExpApp;",
-            ">;"
-        }
-    .end annotation
-
-    const v1, -0xd012e7c
-
-    const-string v0, "\u06e2\u06e2\u06dc\u06d8\u06e6\u06ec\u06e6\u06d8\u06d6\u06e4\u06df\u06ec\u06d9\u06e0\u06e2\u06e5\u06e7\u06d8\u06d6\u06d8\u06da"
-
-    :goto_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v2, v1
-
-    sparse-switch v2, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v0, "\u06da\u06df\u06d6\u06e1\u06e4\u06df\u06e8\u06e7\u06e8\u06da\u06d8\u06d8\u06e6\u06dc\u06e5\u06d8\u06db\u06d9\u06d6"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "\u06e6\u06e4\u06d8\u06e6\u06eb\u06d8\u06e7\u06e0\u06da\u06df\u06e2\u06d8\u06d8\u06df\u06e1\u06dc\u06d8\u06e5\u06e6\u06dc\u06d8\u06d6\u06e4\u06da\u06d9\u06e4\u06e8"
-
-    goto :goto_0
-
-    :sswitch_1
-    invoke-static {}, Lme/weishu/exp/core/Creator;->n()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "\u06dc\u06e8\u06e1\u06e6\u06e8\u06e1\u06d8\u06e2\u06d8\u06d8\u06e8\u06ec\u06d9\u06e7\u06e5\u06e2\u06e6\u06d8\u06d8\u06db\u06da\u06e8\u06e7\u06d8\u06e5\u06e6\u06e1"
-
-    goto :goto_0
-
-    :sswitch_2
-    invoke-static {}, Lme/weishu/exposed/MagiskServer;->getService()Lexp/aqg;
-
-    move-result-object v2
-
-    const v1, 0x707f4ef3
-
-    const-string v0, "\u06e2\u06d9\u06e5\u06d8\u06df\u06da\u06e0\u06e6\u06e5\u06df\u06ec\u06ec\u06d8\u06d8\u06e7\u06eb\u06dc\u06e4\u06dc\u06e5\u06e2\u06d7\u06e1\u06d9\u06e2\u06d8\u06e1\u06da\u06e1\u06d8"
-
-    :goto_1
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    xor-int/2addr v3, v1
-
-    sparse-switch v3, :sswitch_data_1
-
-    goto :goto_1
-
-    :sswitch_3
-    invoke-interface {p0}, Ljava/util/Collection;->size()I
-
-    move-result v0
-
-    new-array v3, v0, [Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    move v1, v0
-
-    :goto_2
-    const v5, -0x6ef32618
-
-    const-string v0, "\u06db\u06e7\u06e5\u06d8\u06df\u06db\u06eb\u06e6\u06e8\u06e1\u06d8\u06db\u06df\u06e5\u06d6\u06ec\u06e8\u06df\u06d7\u06e8\u06d7\u06da\u06e1\u06e2\u06e5\u06e2"
-
-    :goto_3
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v6
-
-    xor-int/2addr v6, v5
-
-    sparse-switch v6, :sswitch_data_2
-
-    goto :goto_3
-
-    :sswitch_4
-    const-string v0, "\u06e7\u06df\u06d6\u06db\u06d8\u06d7\u06eb\u06dc\u06ec\u06d6\u06d9\u06e6\u06d9\u06e5\u06d8\u06e8\u06dc\u06e6\u06e5\u06e8\u06e4\u06eb\u06e4\u06e7\u06df\u06d7\u06e1"
-
-    goto :goto_3
-
-    :cond_1
-    const-string v0, "\u06e0\u06e6\u06df\u06e7\u06e0\u06dc\u06d8\u06eb\u06e1\u06ec\u06dc\u06e7\u06dc\u06d8\u06da\u06d6\u06eb\u06d7\u06e0\u06d7"
-
-    goto :goto_1
-
-    :sswitch_5
-    if-eqz v2, :cond_1
-
-    const-string v0, "\u06da\u06e7\u06e1\u06d8\u06dc\u06df\u06e8\u06da\u06df\u06d8\u06e1\u06ec\u06e5\u06db\u06da\u06e7\u06e0\u06e7\u06da\u06d8\u06e4\u06e4"
-
-    goto :goto_1
-
-    :sswitch_6
-    const-string v0, "\u06da\u06db\u06d6\u06d8\u06e4\u06e1\u06da\u06e1\u06df\u06e6\u06d8\u06e8\u06e7\u06e5\u06d8\u06d6\u06e6\u06e1\u06d8\u06d6\u06eb\u06e5\u06d8"
-
-    goto :goto_1
-
-    :cond_2
-    const-string v0, "\u06e6\u06e5\u06d7\u06da\u06e0\u06e6\u06d8\u06e5\u06eb\u06d6\u06e1\u06d8\u06e7\u06e2\u06d6\u06e5\u06db\u06e1\u06e1\u06e2\u06e1\u06d6\u06d8\u06e2\u06df"
-
-    goto :goto_3
-
-    :sswitch_7
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const-string v0, "\u06d6\u06db\u06e1\u06eb\u06d9\u06e5\u06d8\u06e1\u06e4\u06d8\u06eb\u06d7\u06e7\u06e5\u06e4\u06e4\u06d7\u06e8\u06df\u06df\u06e5\u06e6\u06d8\u06e4\u06df\u06e1\u06d8\u06eb\u06d9\u06dc\u06d8"
-
-    goto :goto_3
-
-    :sswitch_8
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lme/weishu/exp/persistence/ExpApp;
-
-    invoke-virtual {v0}, Lme/weishu/exp/persistence/ExpApp;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v3, v1
-
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_2
-
-    :sswitch_9
-    :try_start_0
-    invoke-interface {v2, v3}, Lexp/aqg;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo([Ljava/lang/String;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :sswitch_a
+    .locals 1
+    # kkkzheli: bypass Magisk service - return input unchanged for offline use
     return-object p0
-
-    :catchall_0
-    move-exception v0
-
-    new-instance v1, Lme/weishu/exp/core/CreateFailedException;
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Lme/weishu/exp/core/CreateFailedException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :sswitch_b
-    new-instance v0, Lme/weishu/exp/core/CreateFailedException;
-
-    const-string v1, "DkQcThI="
-
-    invoke-static {v1}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lme/weishu/exp/core/CreateFailedException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x58f9ce13 -> :sswitch_0
-        -0x51bd046d -> :sswitch_2
-        -0xc621729 -> :sswitch_a
-        0x6d0d7dea -> :sswitch_1
-    .end sparse-switch
-
-    :sswitch_data_1
-    .sparse-switch
-        -0x538cb1e3 -> :sswitch_b
-        0x1b44aaf8 -> :sswitch_3
-        0x3ecaf5de -> :sswitch_5
-        0x6fb14136 -> :sswitch_6
-    .end sparse-switch
-
-    :sswitch_data_2
-    .sparse-switch
-        -0x7cb8dc50 -> :sswitch_9
-        -0x7680bda6 -> :sswitch_8
-        0x10477be8 -> :sswitch_4
-        0x506c5adf -> :sswitch_7
-    .end sparse-switch
 .end method
 
 .method public static n()Z

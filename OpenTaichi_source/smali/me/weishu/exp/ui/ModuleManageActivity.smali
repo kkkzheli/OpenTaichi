@@ -8662,49 +8662,17 @@
 .end method
 
 .method private static synthetic ooO0o0o0o0o0o000oo0oo0000oo0oo0oo0ooo0()Ljava/util/Map;
-    .locals 4
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
         }
     .end annotation
 
-    const-string v0, "\u06d6\u06dc\u06e1\u06da\u06d6\u06e6\u06d8\u06d9\u06da\u06df\u06da\u06e8\u06d8\u06da\u06d9\u06d7\u06e5\u06e1\u06e2\u06e0\u06d9\u06d8\u06d7\u06e7\u06df"
-
-    :goto_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    const/16 v2, 0x239
-
-    const v3, 0x22b59cf4
-
-    xor-int/2addr v1, v2
-
-    xor-int/2addr v1, v3
-
-    packed-switch v1, :pswitch_data_0
-
-    goto :goto_0
-
-    :pswitch_0
-    invoke-static {}, Lexp/aph;->O0oo0oO00o00oo0o0000o00o000o00o00o00oO()Ljava/util/concurrent/Future;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Map;
-
+    # kkkzheli: bypass network module center - return empty map for fully offline mode
+    new-instance v0, Ljava/util/HashMap;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch -0x5a7d7622
-        :pswitch_0
-    .end packed-switch
 .end method
 
 .method private synthetic ooO0o0o0o0o0o000oo0oo0000oo0oo0oo0ooo0(Landroid/view/MenuItem;)Z

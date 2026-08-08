@@ -8387,18 +8387,12 @@
 .method private synthetic nmmmmnnnmmmmnmnmmmmnmmmnmnnmmnmmmmnmmm()V
     .locals 3
 
-    # kkkzheli: direct GET_CONTENT for APK import
+    # kkkzheli: launch SelectAppActivity for app management (matching onActivityResult 0x64)
     new-instance v0, Landroid/content/Intent;
-    const-string v1, "android.intent.action.GET_CONTENT"
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    const-class v1, Lme/weishu/exp/ui/SelectAppActivity;
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    const-string v1, "application/vnd.android.package-archive"
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v1, "android.intent.category.OPENABLE"
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
-
-    const/16 v1, 0x66
+    const/16 v1, 0x64
     invoke-virtual {p0, v0, v1}, Lme/weishu/exp/ui/MainActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     return-void
@@ -23385,6 +23379,9 @@
     goto/16 :goto_0
 
     :sswitch_1b
+    # kkkzheli: guard against null intent data from file import path (setResult without Intent)
+    if-nez p3, :cond_skip_null
+
     const-string v0, "GQ8IHQ=="
 
     invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
@@ -23400,6 +23397,14 @@
     move-object v1, v0
 
     move-object v5, v3
+
+    goto/16 :goto_0
+
+    :cond_skip_null
+    # kkkzheli: skip import when data is null - just return to main page
+    const-string v0, "ۗۙۚ۠ۚۜۛۜۥۘ۠ۡ۫ۗۧۘۘ"
+
+    move-object v1, v0
 
     goto/16 :goto_0
 

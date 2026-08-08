@@ -1357,205 +1357,22 @@
 .end method
 
 .method public static o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
-    .locals 8
-
-    const/4 v2, 0x0
-
-    const v1, 0x72e0858
-
-    const-string v0, "\u06d6\u06e5\u06e8\u06d8\u06d9\u06da\u06d8\u06d8\u06e4\u06eb\u06dc\u06d8\u06e4\u06e1\u06db\u06eb\u06e0\u06d8\u06d8\u06d7\u06d7\u06df"
-
-    :goto_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    xor-int/2addr v3, v1
-
-    sparse-switch v3, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    move-object v0, v2
-
-    :goto_1
-    return-object v0
-
-    :cond_0
-    const-string v0, "\u06e0\u06e0\u06dc\u06d8\u06d6\u06da\u06d6\u06d8\u06e4\u06e6\u06e0\u06d7\u06e6\u06dc\u06dc\u06ec\u06d8\u06d8"
-
-    goto :goto_0
-
-    :sswitch_1
-    if-nez p1, :cond_0
-
-    const-string v0, "\u06e1\u06d7\u06db\u06e8\u06e7\u06eb\u06df\u06da\u06d8\u06d8\u06dc\u06e1\u06e8\u06d8\u06df\u06da\u06e6"
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "\u06d6\u06eb\u06da\u06da\u06db\u06dc\u06d8\u06df\u06ec\u06e8\u06e6\u06d9\u06d6\u06d8\u06da\u06e4\u06e5\u06d8\u06dc\u06e7\u06d8\u06d8\u06e4\u06e5\u06e1\u06df\u06e5\u06e0\u06d8\u06d8"
-
-    goto :goto_0
-
-    :sswitch_3
-    new-instance v4, Ljava/io/File;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v6
-
-    invoke-static {v6, v7}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v4, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    move-result-object v1
-
-    :try_start_1
-    new-instance v0, Ljava/io/FileOutputStream;
-
-    invoke-direct {v0, v4}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    const/16 v2, 0x400
-
-    :try_start_2
-    new-array v3, v2, [B
-
-    :goto_2
-    invoke-virtual {v1, v3}, Ljava/io/InputStream;->read([B)I
-
-    move-result v5
-
-    const v6, 0x4bd6e01e    # 2.8164156E7f
-
-    const-string v2, "\u06dc\u06da\u06e8\u06d8\u06dc\u06dc\u06e1\u06e0\u06dc\u06dc\u06d9\u06d9\u06d7\u06e5"
-
-    :goto_3
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    move-result v7
-
-    xor-int/2addr v7, v6
-
-    sparse-switch v7, :sswitch_data_1
-
-    goto :goto_3
-
-    :sswitch_4
-    const-string v2, "\u06e2\u06e4\u06dc\u06d9\u06e2\u06df\u06ec\u06db\u06e1\u06e4\u06e8\u06d6\u06e0\u06e6\u06e5\u06d8"
-
-    goto :goto_3
-
-    :cond_1
-    :try_start_3
-    const-string v2, "\u06e2\u06d9\u06e7\u06eb\u06dc\u06ec\u06d6\u06df\u06e5\u06e6\u06e0\u06da\u06eb\u06e0\u06da\u06e4\u06da\u06ec\u06dc\u06dc\u06eb"
-
-    goto :goto_3
-
-    :sswitch_5
-    if-lez v5, :cond_1
-
-    const-string v2, "\u06e8\u06e1\u06db\u06e7\u06e7\u06dc\u06dc\u06d7\u06db\u06d9\u06db\u06d8\u06e8\u06e4\u06e7\u06dc\u06db\u06da\u06e6\u06e6"
-
-    goto :goto_3
-
-    :sswitch_6
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v3, v2, v5}, Ljava/io/FileOutputStream;->write([BII)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception v2
-
-    move-object v3, v2
-
-    :goto_4
-    :try_start_4
-    invoke-virtual {v3}, Ljava/lang/Throwable;->printStackTrace()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_3
-
-    :sswitch_7
-    invoke-static {v0}, Lme/weishu/exp/util/IOUtils;->closeSilently(Ljava/io/Closeable;)V
-
-    invoke-static {v1}, Lme/weishu/exp/util/IOUtils;->closeSilently(Ljava/io/Closeable;)V
-
-    invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception v0
-
-    move-object v3, v0
-
-    move-object v0, v2
-
-    goto :goto_4
-
-    :catchall_2
-    move-exception v0
-
-    move-object v3, v0
-
-    move-object v1, v2
-
-    move-object v0, v2
-
-    goto :goto_4
-
-    :catchall_3
-    move-exception v2
-
-    invoke-static {v0}, Lme/weishu/exp/util/IOUtils;->closeSilently(Ljava/io/Closeable;)V
-
-    invoke-static {v1}, Lme/weishu/exp/util/IOUtils;->closeSilently(Ljava/io/Closeable;)V
-
-    throw v2
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x6dec75b4 -> :sswitch_2
-        -0x50146249 -> :sswitch_1
-        0x459e508 -> :sswitch_0
-        0x3bec3159 -> :sswitch_3
-    .end sparse-switch
-
-    :sswitch_data_1
-    .sparse-switch
-        -0x5edca9f5 -> :sswitch_6
-        -0x310fcacb -> :sswitch_7
-        -0x1742f2bb -> :sswitch_5
-        -0x173409c2 -> :sswitch_4
-    .end sparse-switch
+    .locals 0
+
+    # kkkzheli v1.14: simply return the URI path — DocumentsUI on MIUI/Android 11+
+    # already gives us a file:// URI that ContentResolver can handle.
+    # The caller (onActivityResult) passes the URI to Creator, which reads via ContentResolver,
+    # so we do NOT need to copy the file or extract a real path ourselves.
+    # Returning null is fine — the caller has a null check.
+
+    if-nez p1, :cond_null
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    move-result-object p1
+    return-object p1
+
+    :cond_null
+    const/4 p1, 0x0
+    return-object p1
 .end method
 
 .method private synthetic o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Lexp/io;ZLjava/util/concurrent/atomic/AtomicBoolean;)Ljava/util/List;
@@ -6051,10 +5868,12 @@
     goto :goto_0
 
     :sswitch_d
+    # kkkzheli: RESOLVE content:// URI to real file path INSTEAD of copying (avoids main-thread ANR)
     invoke-virtual {p3}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
 
+    # Try to resolve content:// URI to _data column (real file path)
     invoke-static {p0, v0}, Lme/weishu/exp/ui/SelectAppActivity;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v2
@@ -6169,13 +5988,11 @@
     goto/16 :goto_0
 
     :sswitch_19
-    const/4 v0, 0x0
+    # kkkzheli: instead of setResult(0) which overrides the correct result from the wrapper,
+    # just finish() \u2014 the wrapper at :sswitch_18 already called setResult(-1, Intent)+finish
+    invoke-virtual {p0}, Lme/weishu/exp/ui/SelectAppActivity;->finish()V
 
-    invoke-virtual {p0, v0}, Lme/weishu/exp/ui/SelectAppActivity;->setResult(I)V
-
-    const-string v0, "\u06d7\u06e8\u06e5\u06d8\u06e4\u06d9\u06d8\u06db\u06e7\u06e6\u06e5\u06ec\u06d7\u06eb\u06e1\u06e5"
-
-    goto/16 :goto_0
+    return-void
 
     :sswitch_1a
     invoke-virtual {p0}, Lme/weishu/exp/ui/SelectAppActivity;->finish()V

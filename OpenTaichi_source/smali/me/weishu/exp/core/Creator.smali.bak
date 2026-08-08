@@ -1,0 +1,4295 @@
+.class public Lme/weishu/exp/core/Creator;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field public static final DEFAULT_VERSION:I = 0x5b
+
+.field public static final VERSION:I = 0x81
+
+.field private static final o0o0000o0o000oooOO0o0o00o000oo0ooo00oo:Ljava/lang/String; = "Creator"
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    const-string v0, "\u06e1\u06e4\u06e5\u06df\u06da\u06df\u06db\u06e8\u06e5\u06d8\u06df\u06d7\u06e5\u06d8\u06da\u06e7\u06e1\u06d8\u06d9\u06e5\u06dc\u06d8\u06e1\u06e4\u06e6"
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    const/16 v2, 0x321
+
+    const v3, -0xed820d8
+
+    xor-int/2addr v1, v2
+
+    xor-int/2addr v1, v3
+
+    sparse-switch v1, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "DBwfAQcJDQ=="
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lexp/anv;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)V
+
+    const-string v0, "\u06e0\u06d7\u06e5\u06e7\u06eb\u06d8\u06e6\u06eb\u06e0\u06df\u06e4\u06d9\u06e8\u06e2\u06e5\u06e6\u06e6\u06d8\u06e0\u06db\u06e6\u06da\u06d6\u06d6\u06d8\u06e2\u06d9\u06d7"
+
+    goto :goto_0
+
+    :sswitch_1
+    return-void
+
+    :sswitch_data_0
+    .sparse-switch
+        0x235fa283 -> :sswitch_0
+        0x7af4f04a -> :sswitch_1
+    .end sparse-switch
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private static synthetic O0oo0oO00o00oo0o0000o00o000o00o00o00oO(Ljava/io/File;)Z
+    .locals 7
+
+    const/4 v2, 0x0
+
+    const-string v0, "\u06d7\u06e5\u06df\u06e6\u06d7\u06d8\u06d8\u06e4\u06d6\u06e7\u06e8\u06dc\u06e7\u06df\u06e7\u06e5\u06d8\u06e4\u06df\u06dc\u06d8\u06e6\u06e6\u06e0\u06ec\u06e5\u06e4\u06e4\u06ec\u06ec"
+
+    move v1, v2
+
+    move v3, v2
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v4
+
+    const/16 v5, 0x43
+
+    const v6, -0x9a68cdf
+
+    xor-int/2addr v4, v5
+
+    xor-int/2addr v4, v6
+
+    sparse-switch v4, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "\u06df\u06d9\u06eb\u06eb\u06e6\u06e0\u06e4\u06eb\u06e8\u06e2\u06e7\u06e6\u06d8\u06e0\u06d6\u06d6\u06e1\u06d7\u06d9\u06da\u06d6\u06e6\u06ec\u06e6\u06e1\u06d8"
+
+    goto :goto_0
+
+    :sswitch_1
+    const v4, 0xa091e25
+
+    const-string v0, "\u06e2\u06e7\u06e8\u06db\u06d9\u06e0\u06ec\u06d8\u06e4\u06eb\u06e1\u06da\u06e7\u06e0\u06d7\u06e2\u06d6\u06d7\u06df\u06d9\u06e6"
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v5
+
+    xor-int/2addr v5, v4
+
+    sparse-switch v5, :sswitch_data_1
+
+    goto :goto_1
+
+    :sswitch_2
+    invoke-virtual {p0}, Ljava/io/File;->isFile()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "\u06d7\u06e0\u06eb\u06eb\u06ec\u06df\u06e1\u06e0\u06e1\u06dc\u06dc\u06d8\u06e2\u06db\u06db\u06dc\u06d6\u06e2\u06df\u06e6\u06e0\u06d7\u06e4\u06e1\u06d8"
+
+    goto :goto_1
+
+    :cond_0
+    const-string v0, "\u06db\u06db\u06e0\u06e0\u06d8\u06e6\u06e8\u06d9\u06eb\u06e8\u06e2\u06da\u06e7\u06d6\u06d8\u06d7\u06da\u06e6"
+
+    goto :goto_1
+
+    :sswitch_3
+    const-string v0, "\u06db\u06dc\u06dc\u06d6\u06e1\u06d7\u06d8\u06e6\u06e6\u06d8\u06eb\u06df\u06df\u06e4\u06e6\u06ec\u06ec\u06e6\u06e1\u06df\u06d8\u06df\u06d9\u06e6\u06d6\u06d8\u06e0\u06e5\u06e1"
+
+    goto :goto_1
+
+    :sswitch_4
+    const-string v0, "\u06e8\u06ec\u06db\u06e8\u06e6\u06e8\u06d8\u06dc\u06e8\u06d8\u06d9\u06d7\u06da\u06d9\u06d6\u06e4\u06e7\u06ec\u06e1"
+
+    goto :goto_0
+
+    :sswitch_5
+    const v4, -0x514af4ab
+
+    const-string v0, "\u06e4\u06e2\u06dc\u06eb\u06dc\u06e8\u06d8\u06d9\u06db\u06e0\u06df\u06d6\u06d8\u06e8\u06e0\u06e6\u06d8\u06eb\u06e0\u06df"
+
+    :goto_2
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v5
+
+    xor-int/2addr v5, v4
+
+    sparse-switch v5, :sswitch_data_2
+
+    goto :goto_2
+
+    :sswitch_6
+    const-string v0, "\u06dc\u06db\u06e6\u06e4\u06e6\u06dc\u06d8\u06da\u06e0\u06d9\u06e1\u06eb\u06dc\u06d8\u06e4\u06d9\u06df\u06e6\u06e7"
+
+    goto :goto_2
+
+    :cond_1
+    const-string v0, "\u06d9\u06df\u06dc\u06d8\u06d8\u06e0\u06dc\u06dc\u06df\u06e6\u06d8\u06d9\u06d6\u06e6\u06df\u06e6\u06e6\u06d8\u06dc\u06e2\u06e1\u06e2\u06d9\u06e7\u06ec\u06da\u06d9"
+
+    goto :goto_2
+
+    :sswitch_7
+    invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "RwAKFg=="
+
+    invoke-static {v5}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "\u06df\u06eb\u06dc\u06dc\u06e4\u06e8\u06d8\u06e6\u06e8\u06e6\u06d8\u06e6\u06d8\u06df\u06e5\u06dc\u06d8\u06dc\u06e2\u06df\u06dc\u06eb\u06e1\u06d8\u06df\u06e2\u06d9"
+
+    goto :goto_2
+
+    :sswitch_8
+    const-string v0, "\u06eb\u06e8\u06df\u06e7\u06e2\u06ec\u06d9\u06d6\u06d8\u06d8\u06e4\u06d7\u06d8\u06d8\u06e5\u06e2\u06e7\u06e1\u06d6\u06d6"
+
+    goto :goto_0
+
+    :sswitch_9
+    const/4 v3, 0x1
+
+    const-string v0, "\u06d6\u06e0\u06dc\u06d8\u06d7\u06df\u06d6\u06e2\u06df\u06d8\u06e1\u06db\u06d6\u06d6\u06e5\u06e6\u06d8\u06eb\u06e7\u06d6\u06d7\u06db\u06e5\u06db\u06d9\u06e7"
+
+    goto :goto_0
+
+    :sswitch_a
+    const-string v0, "\u06e0\u06d7\u06e1\u06e1\u06eb\u06e5\u06d9\u06e8\u06d9\u06eb\u06eb\u06eb\u06d8\u06d6\u06e8\u06d8\u06d7\u06e6\u06e5\u06db\u06e1\u06ec\u06e0"
+
+    move v1, v3
+
+    goto :goto_0
+
+    :sswitch_b
+    const-string v0, "\u06e2\u06da\u06e6\u06df\u06d7\u06da\u06e8\u06eb\u06d9\u06d9\u06d9\u06d7\u06d9\u06dc\u06e1\u06d8\u06e8\u06eb\u06dc\u06d8\u06dc\u06e6\u06d8\u06da\u06d7\u06da"
+
+    goto :goto_0
+
+    :sswitch_c
+    const-string v0, "\u06ec\u06e1\u06d6\u06e0\u06e6\u06e4\u06e0\u06df\u06e4\u06eb\u06e0\u06e4\u06e0\u06e6\u06e6\u06d8\u06dc\u06dc\u06e8\u06e6\u06da\u06dc\u06ec\u06da\u06db"
+
+    move v1, v2
+
+    goto :goto_0
+
+    :sswitch_d
+    const-string v0, "\u06e5\u06e1\u06d6\u06e6\u06da\u06dc\u06ec\u06e2\u06e1\u06d8\u06e6\u06eb\u06e8\u06eb\u06dc\u06d9\u06e5\u06dc\u06db\u06e5\u06d7\u06dc\u06d8\u06dc\u06d9\u06d8\u06d8\u06e4\u06d6\u06da"
+
+    goto :goto_0
+
+    :sswitch_e
+    const-string v0, "\u06ec\u06e1\u06d6\u06e0\u06e6\u06e4\u06e0\u06df\u06e4\u06eb\u06e0\u06e4\u06e0\u06e6\u06e6\u06d8\u06dc\u06dc\u06e8\u06e6\u06da\u06dc\u06ec\u06da\u06db"
+
+    goto :goto_0
+
+    :sswitch_f
+    return v1
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7d689414 -> :sswitch_f
+        -0x5b236161 -> :sswitch_c
+        -0x554bbd4e -> :sswitch_e
+        -0x2c93a258 -> :sswitch_5
+        -0x1bbf98c -> :sswitch_9
+        0x699fc16 -> :sswitch_1
+        0x22a32305 -> :sswitch_0
+        0x436b3e3a -> :sswitch_a
+        0x56e723bb -> :sswitch_b
+    .end sparse-switch
+
+    :sswitch_data_1
+    .sparse-switch
+        -0x611bb4c7 -> :sswitch_2
+        -0x589f8065 -> :sswitch_4
+        -0x49799fa0 -> :sswitch_3
+        0x7553bdab -> :sswitch_d
+    .end sparse-switch
+
+    :sswitch_data_2
+    .sparse-switch
+        -0x6531721e -> :sswitch_8
+        0x17bf91ab -> :sswitch_7
+        0x38e1278e -> :sswitch_d
+        0x5c5a3cb2 -> :sswitch_6
+    .end sparse-switch
+.end method
+
+.method private static synthetic O0oo0oO00o00oo0o0000o00o000o00o00o00oO(Ljava/io/File;Ljava/lang/String;)Z
+    .locals 5
+
+    const/4 v1, 0x1
+
+    const-string v0, "\u06e1\u06e5\u06d7\u06df\u06e2\u06e5\u06db\u06ec\u06d8\u06d8\u06e6\u06e0\u06dc\u06d8\u06d7\u06eb\u06d6\u06d8\u06e1\u06d6\u06e5\u06e8\u06e7\u06dc"
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    const/16 v3, 0xb6
+
+    const v4, 0x21912a58
+
+    xor-int/2addr v2, v3
+
+    xor-int/2addr v2, v4
+
+    sparse-switch v2, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "\u06e6\u06e2\u06ec\u06e2\u06e7\u06e2\u06d6\u06d9\u06d6\u06db\u06d6\u06e5\u06e0\u06db\u06d7\u06e5\u06e1\u06d7\u06dc\u06e6\u06e8\u06d8\u06e1\u06dc\u06e8\u06dc\u06dc\u06d6\u06d8"
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "\u06d8\u06e5\u06da\u06e2\u06d6\u06e1\u06ec\u06d9\u06dc\u06d8\u06e5\u06d9\u06e5\u06d8\u06e1\u06df\u06e8\u06df\u06e7\u06d8\u06d8\u06e7\u06d6\u06da\u06d6\u06e4\u06da"
+
+    goto :goto_0
+
+    :sswitch_2
+    const v2, 0x7a34b297
+
+    const-string v0, "\u06ec\u06e5\u06d8\u06e8\u06e0\u06e5\u06d8\u06e5\u06eb\u06e7\u06e0\u06dc\u06e5\u06db\u06df\u06da\u06eb\u06e7\u06eb\u06db\u06e5\u06e6\u06df\u06e1\u06d8"
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    xor-int/2addr v3, v2
+
+    sparse-switch v3, :sswitch_data_1
+
+    goto :goto_1
+
+    :sswitch_3
+    const-string v0, "\u06e4\u06df\u06e0\u06da\u06df\u06e5\u06e8\u06e0\u06dc\u06dc\u06eb\u06e1\u06d8\u06d7\u06e2\u06e8\u06d8\u06ec\u06da\u06da\u06e1\u06db\u06d9\u06d9\u06ec"
+
+    goto :goto_1
+
+    :cond_0
+    const-string v0, "\u06ec\u06db\u06e1\u06e8\u06da\u06db\u06d6\u06e1\u06e6\u06da\u06e4\u06d7\u06dc\u06e6\u06d8\u06df\u06ec\u06e2\u06db\u06e4\u06db"
+
+    goto :goto_1
+
+    :sswitch_4
+    const-string v0, "RzY8Lw=="
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "\u06d6\u06da\u06e7\u06e4\u06e2\u06e4\u06df\u06dc\u06d6\u06ec\u06e8\u06d9\u06d9\u06da\u06e2\u06e5\u06df\u06e8\u06d8\u06dc\u06e8\u06e6\u06d8"
+
+    goto :goto_1
+
+    :sswitch_5
+    const-string v0, "\u06e7\u06ec\u06d8\u06da\u06d7\u06e8\u06d8\u06e6\u06d9\u06e5\u06d8\u06db\u06eb\u06d9\u06d6\u06db\u06e5\u06dc\u06da\u06d7\u06d7\u06e6\u06e6\u06e5\u06da\u06eb\u06e4"
+
+    goto :goto_0
+
+    :sswitch_6
+    move v0, v1
+
+    :goto_2
+    return v0
+
+    :sswitch_7
+    const v2, 0x4f63ab48    # 3.81965312E9f
+
+    const-string v0, "\u06da\u06ec\u06e8\u06d7\u06e2\u06d6\u06df\u06e2\u06dc\u06e6\u06d6\u06e1\u06d8\u06e1\u06d7\u06d6\u06d6\u06ec\u06d8\u06dc\u06e5\u06e6\u06e6"
+
+    :goto_3
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    xor-int/2addr v3, v2
+
+    sparse-switch v3, :sswitch_data_2
+
+    goto :goto_3
+
+    :sswitch_8
+    const-string v0, "\u06e1\u06ec\u06d8\u06df\u06e1\u06e5\u06d6\u06e7\u06d6\u06eb\u06dc\u06e7\u06d8\u06d8\u06d7\u06e0\u06eb\u06d8\u06d6\u06d8\u06e6\u06d7\u06e2\u06e7\u06db"
+
+    goto :goto_3
+
+    :cond_1
+    const-string v0, "\u06e2\u06d6\u06d9\u06e6\u06d7\u06e1\u06e2\u06e2\u06e6\u06d8\u06e0\u06e6\u06e8\u06d8\u06e4\u06e2\u06da\u06df\u06e7\u06e8\u06e7\u06da\u06e1\u06d8\u06d9\u06e6\u06d6\u06e2\u06e0\u06e4"
+
+    goto :goto_3
+
+    :sswitch_9
+    const-string v0, "Rzcp"
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "\u06d9\u06ec\u06d8\u06e0\u06db\u06d9\u06e6\u06d6\u06dc\u06d8\u06ec\u06e5\u06dc\u06d8\u06dc\u06e7\u06d6\u06d8\u06e8\u06d6\u06e1\u06d8\u06dc\u06e6\u06df\u06db\u06da\u06e1\u06e6\u06e0"
+
+    goto :goto_3
+
+    :sswitch_a
+    const-string v0, "\u06e2\u06df\u06e1\u06e0\u06e8\u06dc\u06e6\u06e5\u06e8\u06e6\u06e0\u06e1\u06d8\u06db\u06e6\u06e8\u06d8\u06e0\u06d7\u06e0\u06e8\u06db\u06d6\u06d6\u06df\u06e0\u06e2\u06db\u06e6\u06d8"
+
+    goto :goto_0
+
+    :sswitch_b
+    move v0, v1
+
+    goto :goto_2
+
+    :sswitch_c
+    const v2, 0x74657a2c
+
+    const-string v0, "\u06e0\u06eb\u06e8\u06e8\u06d7\u06ec\u06d7\u06e2\u06e1\u06e2\u06e1\u06e8\u06df\u06dc\u06e7\u06e2\u06e6\u06e8\u06d8\u06e5\u06d8\u06d9\u06dc\u06e2\u06df\u06e8\u06ec"
+
+    :goto_4
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    xor-int/2addr v3, v2
+
+    sparse-switch v3, :sswitch_data_3
+
+    goto :goto_4
+
+    :sswitch_d
+    const-string v0, "\u06dc\u06eb\u06e6\u06db\u06da\u06e8\u06d8\u06d8\u06e8\u06d8\u06da\u06dc\u06d8\u06d8\u06d6\u06dc\u06d8\u06d8\u06e8\u06dc\u06e7\u06d8\u06eb\u06e0\u06dc\u06e1\u06d9\u06e1\u06d8"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v0, "\u06d8\u06ec\u06df\u06d8\u06e7\u06e6\u06d8\u06d8\u06d7\u06e8\u06eb\u06e1\u06d9\u06df\u06e8\u06d8\u06e8\u06df\u06dc\u06d8\u06d8\u06d7\u06e6\u06d8\u06e8\u06e7\u06d6\u06d8\u06d7\u06d8\u06e5\u06d8"
+
+    goto :goto_4
+
+    :sswitch_e
+    const-string v0, "JCUhJzIpOj9LKCc="
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const-string v0, "\u06e6\u06e8\u06e1\u06db\u06e4\u06e6\u06d8\u06e6\u06e6\u06e5\u06d8\u06e6\u06d8\u06dc\u06e1\u06eb\u06e6\u06d8\u06df\u06e0\u06ec\u06dc\u06dc\u06e1\u06d9\u06dc"
+
+    goto :goto_4
+
+    :sswitch_f
+    const-string v0, "\u06e8\u06ec\u06ec\u06e1\u06e8\u06d9\u06ec\u06e5\u06e6\u06d8\u06e8\u06d6\u06da\u06db\u06e8\u06dc\u06ec\u06e8\u06d7\u06e6\u06d8\u06e7\u06d8"
+
+    goto :goto_4
+
+    :sswitch_10
+    move v0, v1
+
+    goto :goto_2
+
+    :sswitch_11
+    const/4 v0, 0x0
+
+    goto :goto_2
+
+    :sswitch_12
+    const-string v0, "\u06e2\u06da\u06e1\u06d8\u06d6\u06da\u06e7\u06d7\u06e6\u06d6\u06d8\u06dc\u06e8\u06d6\u06d6\u06d6\u06e2"
+
+    goto/16 :goto_0
+
+    :sswitch_13
+    const-string v0, "\u06db\u06e4\u06ec\u06e6\u06e8\u06e4\u06dc\u06da\u06e2\u06eb\u06e8\u06e6\u06d8\u06e2\u06db\u06e2"
+
+    goto/16 :goto_0
+
+    :sswitch_14
+    const-string v0, "\u06dc\u06da\u06e1\u06d8\u06eb\u06e2\u06eb\u06ec\u06d7\u06e8\u06e0\u06d7\u06d8\u06e7\u06d8"
+
+    goto/16 :goto_0
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x3fdf8b13 -> :sswitch_b
+        -0x24475564 -> :sswitch_1
+        0x30c321ed -> :sswitch_2
+        0x32dc2bfb -> :sswitch_c
+        0x3e139057 -> :sswitch_0
+        0x491911d3 -> :sswitch_7
+        0x4a3338a7 -> :sswitch_6
+        0x4ca3cc3a -> :sswitch_11
+        0x6a1f0989 -> :sswitch_10
+    .end sparse-switch
+
+    :sswitch_data_1
+    .sparse-switch
+        -0x3c634aab -> :sswitch_3
+        -0x16f73619 -> :sswitch_5
+        0xe4083f2 -> :sswitch_4
+        0x4b0246d5 -> :sswitch_12
+    .end sparse-switch
+
+    :sswitch_data_2
+    .sparse-switch
+        -0x5bfdb74a -> :sswitch_13
+        -0x3ca1deb2 -> :sswitch_a
+        0xec5859e -> :sswitch_9
+        0x19a5cdfb -> :sswitch_8
+    .end sparse-switch
+
+    :sswitch_data_3
+    .sparse-switch
+        -0x6f5c7452 -> :sswitch_e
+        -0x4660f0c2 -> :sswitch_f
+        -0x36d99552 -> :sswitch_14
+        0x35944e0a -> :sswitch_d
+    .end sparse-switch
+.end method
+
+.method public static addAppsDirectly(Landroid/content/Context;Ljava/util/Collection;)Ljava/util/Set;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/util/Collection",
+            "<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Ljava/util/Set",
+            "<",
+            "Lme/weishu/exp/persistence/ExpApp;",
+            ">;"
+        }
+    .end annotation
+
+    const/4 v1, 0x0
+
+    const v2, -0x6a44fb56
+
+    const-string v0, "\u06e4\u06d7\u06d6\u06d8\u06ec\u06e5\u06e2\u06e4\u06da\u06e1\u06d9\u06db\u06e8\u06e8\u06da\u06d9\u06ec\u06e2\u06e0\u06db\u06e4\u06d6\u06e6\u06eb\u06ec"
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    xor-int/2addr v3, v2
+
+    sparse-switch v3, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    invoke-static {}, Lme/weishu/exp/core/Creator;->n()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "\u06d6\u06ec\u06e2\u06e6\u06dc\u06da\u06e5\u06da\u06e1\u06e5\u06df\u06e6\u06d7\u06e5\u06ec\u06da\u06d7"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "\u06e2\u06dc\u06e4\u06db\u06e8\u06e1\u06e0\u06df\u06e6\u06d7\u06e7\u06e5\u06d8\u06e7\u06e6\u06ec\u06df\u06df\u06df\u06e5\u06e4\u06da"
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "\u06d9\u06eb\u06e1\u06d8\u06e1\u06e1\u06e8\u06d8\u06d7\u06da\u06df\u06e4\u06ec\u06e5\u06d8\u06da\u06dc\u06e5\u06df\u06db\u06e0\u06d8\u06e6\u06e2\u06e1\u06e4\u06db\u06d8\u06dc\u06e1"
+
+    goto :goto_0
+
+    :sswitch_2
+    const v2, 0x390472e1
+
+    const-string v0, "\u06da\u06db\u06db\u06e5\u06ec\u06e2\u06e4\u06ec\u06e6\u06e4\u06e4\u06e2\u06db\u06ec\u06e2\u06d7\u06eb\u06d6\u06e2\u06df\u06e2\u06e4\u06eb\u06e1\u06d8"
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    xor-int/2addr v3, v2
+
+    sparse-switch v3, :sswitch_data_1
+
+    goto :goto_1
+
+    :sswitch_3
+    invoke-static {}, Lme/weishu/exp/core/Creator;->j()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "\u06e0\u06da\u06d7\u06d6\u06ec\u06e1\u06ec\u06eb\u06d9\u06d6\u06df\u06d6\u06e2\u06e6\u06d7"
+
+    goto :goto_1
+
+    :cond_1
+    const-string v0, "\u06ec\u06e8\u06d6\u06d8\u06e8\u06d6\u06dc\u06e0\u06da\u06e7\u06dc\u06d7\u06e6\u06e2\u06ec\u06e4\u06e5\u06d6\u06d8\u06da\u06ec\u06ec\u06e8\u06db"
+
+    goto :goto_1
+
+    :sswitch_4
+    const-string v0, "\u06eb\u06df\u06eb\u06eb\u06e1\u06df\u06e0\u06e0\u06dc\u06d8\u06d7\u06da\u06d8\u06d8\u06eb\u06e6\u06e5\u06d8\u06e2\u06e7\u06da\u06d8\u06d6\u06d7\u06d9\u06e0\u06e2\u06e8\u06d6"
+
+    goto :goto_1
+
+    :sswitch_5
+    move v0, v1
+
+    :goto_2
+    const v3, -0x75e37d33
+
+    const-string v2, "\u06d9\u06db\u06d8\u06d8\u06e5\u06e8\u06d9\u06db\u06d9\u06d7\u06e5\u06d8\u06d6\u06d8\u06db\u06e4\u06d8\u06d8\u06df\u06e2\u06dc\u06d8"
+
+    :goto_3
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v4
+
+    xor-int/2addr v4, v3
+
+    sparse-switch v4, :sswitch_data_2
+
+    goto :goto_3
+
+    :sswitch_6
+    invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    :goto_4
+    return-object v0
+
+    :sswitch_7
+    const/4 v0, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    const-string v2, "\u06d6\u06e7\u06e8\u06da\u06d9\u06e1\u06d8\u06d9\u06dc\u06e1\u06d8\u06e7\u06d6\u06e4\u06e1\u06ec\u06e2\u06e5\u06e1\u06e6\u06d8"
+
+    goto :goto_3
+
+    :sswitch_8
+    if-nez v0, :cond_2
+
+    const-string v2, "\u06e2\u06e4\u06e7\u06d7\u06da\u06dc\u06d8\u06db\u06e6\u06dc\u06d8\u06d7\u06e2\u06d6\u06d8\u06e7\u06d6\u06e5\u06d8\u06dc\u06d9\u06e6\u06e0\u06e5\u06e6\u06d8\u06da\u06eb\u06e4\u06d8\u06dc\u06e0"
+
+    goto :goto_3
+
+    :sswitch_9
+    const-string v2, "\u06e5\u06e6\u06dc\u06d8\u06eb\u06e1\u06e7\u06d8\u06d8\u06e0\u06e4\u06e7\u06ec\u06df\u06d9\u06d9\u06e1\u06e6\u06dc\u06d8"
+
+    goto :goto_3
+
+    :sswitch_a
+    new-instance v2, Ljava/util/HashSet;
+
+    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
+
+    const-string v0, "GQgODREEBgcBABM="
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_5
+    const v4, -0x6a972cbc
+
+    const-string v0, "\u06e6\u06e2\u06e5\u06e1\u06d8\u06e0\u06e6\u06db\u06d6\u06e8\u06d8\u06e7\u06d8\u06ec\u06da\u06e6\u06dc\u06dc\u06dc\u06d8\u06d8\u06d8\u06e1\u06d8\u06e5\u06da\u06d8"
+
+    :goto_6
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v5
+
+    xor-int/2addr v5, v4
+
+    sparse-switch v5, :sswitch_data_3
+
+    goto :goto_6
+
+    :sswitch_b
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    new-instance v4, Lme/weishu/exp/persistence/ExpApp;
+
+    invoke-direct {v4}, Lme/weishu/exp/persistence/ExpApp;-><init>()V
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v5
+
+    const/4 v6, 0x0
+
+    :try_start_0
+    invoke-virtual {v5, v0, v6}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    iget-object v5, v0, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Lme/weishu/exp/persistence/ExpApp;->setPackageName(Ljava/lang/String;)V
+
+    iget v5, v0, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    invoke-virtual {v4, v5}, Lme/weishu/exp/persistence/ExpApp;->setVersionCode(I)V
+
+    iget-object v0, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+
+    invoke-virtual {v4, v0}, Lme/weishu/exp/persistence/ExpApp;->setVersionName(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v1}, Lme/weishu/exp/persistence/ExpApp;->setExpApp(Z)V
+
+    const-string v0, "GQgODREEBgcBABM="
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Lme/weishu/exp/persistence/ExpApp;->setExpSource(Ljava/lang/String;)V
+
+    const-string v0, "GQgODREEBgcBABM="
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Lme/weishu/exp/persistence/ExpApp;->setOriginalSource(Ljava/lang/String;)V
+
+    const-string v0, "GQgODREEBgcBABM="
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Lme/weishu/exp/persistence/ExpApp;->setOriginalSignature(Ljava/lang/String;)V
+
+    const-string v0, "GQgODREEBgcBABM="
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Lme/weishu/exp/persistence/ExpApp;->setBackupName(Ljava/lang/String;)V
+
+    sget-object v0, Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo:Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;
+
+    invoke-virtual {v4, v0}, Lme/weishu/exp/persistence/ExpApp;->setStatus(Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;)V
+
+    invoke-interface {v2, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    goto :goto_5
+
+    :cond_3
+    const-string v0, "\u06e4\u06e5\u06e1\u06e4\u06e7\u06d8\u06d8\u06d9\u06df\u06e2\u06e4\u06db\u06e4\u06df\u06e0\u06e8\u06d8\u06e2\u06e4\u06e2\u06d8\u06e6\u06da"
+
+    goto :goto_6
+
+    :sswitch_c
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const-string v0, "\u06df\u06d9\u06db\u06d6\u06e1\u06df\u06d6\u06df\u06e4\u06d6\u06db\u06d8\u06d7\u06e0\u06e4"
+
+    goto :goto_6
+
+    :sswitch_d
+    const-string v0, "\u06e1\u06d7\u06e2\u06d9\u06eb\u06e5\u06db\u06eb\u06dc\u06e7\u06eb\u06e4\u06d7\u06e2\u06e0\u06d6\u06e6\u06ec"
+
+    goto :goto_6
+
+    :sswitch_e
+    move-object v0, v2
+
+    goto/16 :goto_4
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_5
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x76769130 -> :sswitch_2
+        -0x6dc4cdba -> :sswitch_0
+        -0x4400e997 -> :sswitch_1
+        -0x2b49751d -> :sswitch_7
+    .end sparse-switch
+
+    :sswitch_data_1
+    .sparse-switch
+        -0x4adfd1ad -> :sswitch_4
+        -0x1f1f3f2d -> :sswitch_5
+        -0xf7f5299 -> :sswitch_7
+        0x6bf3a12c -> :sswitch_3
+    .end sparse-switch
+
+    :sswitch_data_2
+    .sparse-switch
+        -0x3e39cfe6 -> :sswitch_a
+        0x25b8a7af -> :sswitch_8
+        0x28060402 -> :sswitch_9
+        0x2c9ed58e -> :sswitch_6
+    .end sparse-switch
+
+    :sswitch_data_3
+    .sparse-switch
+        -0xfdad6ec -> :sswitch_d
+        0x9557f9e -> :sswitch_c
+        0x37e61c95 -> :sswitch_e
+        0x5292bee6 -> :sswitch_b
+    .end sparse-switch
+.end method
+
+.method private static copyNativeLibs(Ljava/io/File;Ljava/io/File;)V
+    .locals 22
+
+    const/16 v18, 0x0
+
+    const/16 v17, 0x0
+
+    const/16 v16, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v15, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v6, 0x0
+
+    const-string v2, "\u06ec\u06db\u06eb\u06e6\u06da\u06e1\u06e5\u06e2\u06d8\u06d8\u06d9\u06e5\u06e2\u06d9\u06eb\u06d6\u06eb\u06d7\u06d8\u06e0\u06e0\u06e0\u06d7\u06e1\u06e6\u06d9\u06e6\u06db"
+
+    :goto_0
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v19
+
+    const/16 v20, 0x1e7
+
+    const v21, -0x265a9cc0
+
+    xor-int v19, v19, v20
+
+    xor-int v19, v19, v21
+
+    sparse-switch v19, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v2, "\u06e2\u06e7\u06d6\u06e0\u06da\u06da\u06e8\u06dc\u06e4\u06eb\u06e8\u06e1\u06e4\u06e2\u06d6\u06e2\u06e5\u06e8\u06db\u06ec\u06eb\u06e6\u06d9\u06e8\u06d8\u06eb"
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v2, "\u06db\u06e6\u06e0\u06eb\u06e7\u06e5\u06d8\u06d6\u06e7\u06da\u06e5\u06e0\u06e6\u06d8\u06e7\u06e8\u06d8\u06e2\u06e6\u06e1\u06d8\u06e2\u06dc\u06dc\u06d8\u06da\u06d6\u06e7\u06d8\u06d7\u06e0\u06db"
+
+    goto :goto_0
+
+    :sswitch_2
+    new-instance v18, Ljava/io/File;
+
+    const-string v2, "BQ0N"
+
+    invoke-static {v2}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    move-object/from16 v0, v18
+
+    move-object/from16 v1, p0
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    const-string v2, "\u06d7\u06e1\u06d9\u06e8\u06d7\u06d6\u06e1\u06e7\u06ec\u06dc\u06e5\u06dc\u06d8\u06d8\u06d8"
+
+    goto :goto_0
+
+    :sswitch_3
+    new-instance v17, Ljava/io/File;
+
+    const-string v2, "BQ0N"
+
+    invoke-static {v2}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v1, p1
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    const-string v2, "\u06d8\u06e7\u06da\u06e7\u06e6\u06e8\u06d7\u06eb\u06e5\u06e0\u06df\u06d9\u06db\u06d6\u06db\u06da\u06eb\u06df\u06e4\u06da\u06d7\u06df\u06d6\u06d8"
+
+    goto :goto_0
+
+    :sswitch_4
+    invoke-virtual/range {v18 .. v18}, Ljava/io/File;->exists()Z
+
+    move-result v16
+
+    const-string v2, "\u06da\u06ec\u06e0\u06da\u06e1\u06e8\u06d6\u06e6\u06e7\u06d8\u06ec\u06dc\u06df\u06db\u06e8\u06db\u06e1\u06d6\u06e2\u06e1\u06e6\u06e2\u06d8\u06d9\u06e5"
+
+    goto :goto_0
+
+    :sswitch_5
+    const-string v2, "CBYCWEBBH1ME"
+
+    invoke-static {v2}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    const-string v2, "\u06e2\u06d6\u06e6\u06d9\u06e1\u06e4\u06df\u06d7\u06d6\u06d8\u06e2\u06e6\u06d7\u06eb\u06e7\u06e0\u06d6\u06e8\u06e5\u06d8"
+
+    goto :goto_0
+
+    :sswitch_6
+    const-string v2, "EVxZMUJY"
+
+    invoke-static {v2}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    const-string v2, "\u06e2\u06d7\u06d6\u06e0\u06e1\u06e5\u06d8\u06df\u06e5\u06e2\u06e5\u06d8\u06e1\u06d8\u06da\u06e8\u06d6\u06da\u06e5\u06d6\u06e1\u06db\u06d9\u06e6\u06e6"
+
+    goto :goto_0
+
+    :sswitch_7
+    const/4 v7, 0x0
+
+    const-string v2, "\u06e5\u06df\u06d6\u06d8\u06dc\u06e8\u06d8\u06ec\u06e4\u06ec\u06e6\u06df\u06d9\u06e5\u06e0\u06e1\u06d8\u06d6\u06dc\u06d6\u06d8\u06e7\u06e5\u06e8\u06d8\u06e4\u06da\u06e5"
+
+    goto :goto_0
+
+    :sswitch_8
+    const/4 v15, 0x1
+
+    const-string v2, "\u06e6\u06e0\u06d9\u06df\u06df\u06e5\u06d8\u06e7\u06e6\u06e4\u06e6\u06e7\u06d8\u06d8\u06d6\u06e5\u06d8\u06df\u06ec\u06df\u06dc\u06e5\u06d6\u06d8"
+
+    goto :goto_0
+
+    :sswitch_9
+    const v19, 0x21aa3310
+
+    const-string v2, "\u06d7\u06d9\u06dc\u06d8\u06e5\u06e8\u06eb\u06db\u06db\u06eb\u06d7\u06d8\u06df\u06eb\u06e4\u06d9\u06e5\u06df\u06e4\u06e4\u06df\u06e1\u06d8\u06e0\u06e4\u06e6"
+
+    :goto_1
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v20
+
+    xor-int v20, v20, v19
+
+    sparse-switch v20, :sswitch_data_1
+
+    goto :goto_1
+
+    :sswitch_a
+    const-string v2, "\u06e4\u06e6\u06ec\u06e0\u06e2\u06d7\u06ec\u06e4\u06ec\u06e4\u06e6\u06d8\u06e1\u06e7\u06d7"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v2, "\u06e2\u06eb\u06e1\u06e8\u06df\u06d8\u06e7\u06e0\u06e6\u06d8\u06df\u06d6\u06e7\u06d8\u06db\u06d6\u06ec"
+
+    goto :goto_1
+
+    :sswitch_b
+    if-nez v16, :cond_0
+
+    const-string v2, "\u06e6\u06df\u06da\u06d8\u06e2\u06d9\u06da\u06db\u06e5\u06e4\u06e5\u06e1\u06e4\u06e0\u06e2\u06db\u06eb"
+
+    goto :goto_1
+
+    :sswitch_c
+    const-string v2, "\u06e1\u06e2\u06e6\u06d8\u06e2\u06d6\u06dc\u06d7\u06d9\u06eb\u06db\u06db\u06df\u06dc\u06d6\u06e1\u06d8\u06eb\u06e6\u06df\u06e5\u06e8\u06e1\u06d8"
+
+    goto :goto_1
+
+    :sswitch_d
+    const-string v2, "\u06e7\u06d6\u06e1\u06e1\u06e1\u06d6\u06d8\u06d6\u06d8\u06e7\u06ec\u06dc\u06d6\u06d8\u06d7\u06db\u06e7\u06d9\u06eb\u06d8\u06e5\u06e6\u06d6\u06d8"
+
+    goto :goto_0
+
+    :sswitch_e
+    invoke-static/range {v18 .. v18}, Lme/weishu/exp/util/IOUtils;->ensureCreated(Ljava/io/File;)V
+
+    const-string v2, "\u06db\u06eb\u06e6\u06d8\u06ec\u06d7\u06d9\u06e6\u06df\u06dc\u06d8\u06e6\u06d6\u06d9\u06dc\u06d8\u06e5\u06e1\u06eb\u06e2\u06ec\u06ec\u06e1\u06d8\u06d7\u06dc\u06d9"
+
+    goto :goto_0
+
+    :sswitch_f
+    new-instance v2, Ljava/io/File;
+
+    const-string v19, "CBYCWEBBH1ME"
+
+    invoke-static/range {v19 .. v19}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v19
+
+    move-object/from16 v0, v18
+
+    move-object/from16 v1, v19
+
+    invoke-direct {v2, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-static {v2}, Lme/weishu/exp/util/IOUtils;->ensureCreated(Ljava/io/File;)V
+
+    const-string v2, "\u06d6\u06e0\u06d6\u06d8\u06da\u06e5\u06d6\u06db\u06df\u06e4\u06d9\u06e1\u06da\u06e4\u06dc\u06dc\u06d8\u06e2\u06ec\u06e0\u06e5\u06e1\u06d9"
+
+    goto/16 :goto_0
+
+    :sswitch_10
+    new-instance v2, Ljava/io/File;
+
+    const-string v19, "EVxZMUJY"
+
+    invoke-static/range {v19 .. v19}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v19
+
+    move-object/from16 v0, v18
+
+    move-object/from16 v1, v19
+
+    invoke-direct {v2, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-static {v2}, Lme/weishu/exp/util/IOUtils;->ensureCreated(Ljava/io/File;)V
+
+    const-string v2, "\u06e7\u06df\u06e8\u06d8\u06db\u06ec\u06d7\u06df\u06e7\u06da\u06e2\u06e1\u06dc\u06d8\u06da\u06e7\u06d7\u06d6\u06e4\u06e4\u06df\u06ec\u06e6\u06dc\u06d8\u06eb\u06e6\u06e1\u06d8"
+
+    goto/16 :goto_0
+
+    :sswitch_11
+    const-string v2, "\u06e2\u06dc\u06da\u06e4\u06d7\u06e5\u06d8\u06eb\u06e2\u06e7\u06e6\u06dc\u06d8\u06d7\u06e5\u06e1\u06d8\u06da\u06df\u06d8\u06e5\u06e8\u06df"
+
+    move v14, v15
+
+    goto/16 :goto_0
+
+    :sswitch_12
+    sget-object v2, Lme/weishu/exp/core/-$$Lambda$Creator$FNuE-hYAXhBBFV-rFLzfaCGaPo0;->INSTANCE:Lme/weishu/exp/core/-$$Lambda$Creator$FNuE-hYAXhBBFV-rFLzfaCGaPo0;
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v0, v2}, Ljava/io/File;->list(Ljava/io/FilenameFilter;)[Ljava/lang/String;
+
+    move-result-object v13
+
+    const-string v2, "\u06da\u06db\u06dc\u06d8\u06e7\u06db\u06d6\u06d8\u06eb\u06e1\u06d7\u06d7\u06e1\u06dc\u06d8\u06e6\u06dc\u06e5\u06ec\u06eb\u06ec\u06d9\u06e4\u06d9\u06e5\u06d6\u06df"
+
+    goto/16 :goto_0
+
+    :sswitch_13
+    const-string v2, "\u06e4\u06e7\u06df\u06eb\u06e8\u06d8\u06d8\u06d6\u06d8\u06d6\u06e5\u06d7\u06e0\u06e8\u06d9\u06e1\u06d8"
+
+    move v14, v15
+
+    goto/16 :goto_0
+
+    :sswitch_14
+    const v19, -0x71039358
+
+    const-string v2, "\u06e7\u06d6\u06d8\u06d8\u06d8\u06da\u06e2\u06d9\u06d7\u06dc\u06d8\u06eb\u06df\u06e1\u06e1\u06eb\u06e6\u06d8\u06df\u06db\u06ec\u06db\u06ec\u06e8\u06da\u06e2\u06e6\u06d8\u06d6\u06e7\u06e5\u06d8"
+
+    :goto_2
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v20
+
+    xor-int v20, v20, v19
+
+    sparse-switch v20, :sswitch_data_2
+
+    goto :goto_2
+
+    :sswitch_15
+    const-string v2, "\u06dc\u06e7\u06d6\u06e0\u06da\u06d7\u06e5\u06d8\u06df\u06da\u06dc\u06e8\u06e6\u06da\u06d9\u06ec\u06e2\u06d8\u06d8\u06d7\u06d6"
+
+    goto :goto_2
+
+    :cond_1
+    const-string v2, "\u06e7\u06d7\u06df\u06d9\u06d7\u06e8\u06d8\u06ec\u06dc\u06e6\u06d8\u06d8\u06d7\u06df\u06eb\u06e2"
+
+    goto :goto_2
+
+    :sswitch_16
+    if-eqz v13, :cond_1
+
+    const-string v2, "\u06e6\u06e7\u06e7\u06e2\u06db\u06e6\u06d8\u06d8\u06e4\u06d9\u06da\u06d9\u06e5\u06d8\u06d9\u06e2\u06d9\u06d8\u06d9\u06d6"
+
+    goto :goto_2
+
+    :sswitch_17
+    const-string v2, "\u06d8\u06ec\u06da\u06df\u06df\u06e0\u06e5\u06d6\u06d8\u06df\u06e8\u06e6\u06d8\u06d9\u06e8\u06ec\u06e5\u06e4\u06db\u06dc\u06e4"
+
+    goto/16 :goto_0
+
+    :sswitch_18
+    const v19, 0x2b74dbaf
+
+    const-string v2, "\u06d7\u06e2\u06e4\u06d9\u06e7\u06dc\u06e4\u06e5\u06dc\u06d8\u06d9\u06d9\u06e2\u06e5\u06d7\u06e8\u06db\u06e1\u06d8\u06e2\u06eb\u06dc\u06d8"
+
+    :goto_3
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v20
+
+    xor-int v20, v20, v19
+
+    sparse-switch v20, :sswitch_data_3
+
+    goto :goto_3
+
+    :sswitch_19
+    const-string v2, "\u06d7\u06ec\u06e6\u06dc\u06da\u06df\u06e4\u06e4\u06da\u06e1\u06e6\u06e8\u06d8\u06e2\u06e0\u06e1\u06d8\u06e0\u06d7\u06e5\u06da\u06db\u06db"
+
+    goto/16 :goto_0
+
+    :cond_2
+    const-string v2, "\u06e4\u06db\u06dc\u06d8\u06d6\u06d8\u06ec\u06e6\u06e4\u06eb\u06e6\u06e6\u06df\u06db\u06dc\u06e1\u06d8\u06ec\u06e1\u06dc\u06d8\u06d9\u06e1\u06e8\u06d8\u06e1\u06e8\u06d7\u06e4\u06e7"
+
+    goto :goto_3
+
+    :sswitch_1a
+    array-length v2, v13
+
+    if-nez v2, :cond_2
+
+    const-string v2, "\u06e6\u06d6\u06dc\u06e0\u06dc\u06eb\u06e2\u06e5\u06d7\u06e6\u06e5\u06d6\u06d8\u06d6\u06ec\u06e5\u06d8\u06d8\u06e6\u06e0\u06dc"
+
+    goto :goto_3
+
+    :sswitch_1b
+    const-string v2, "\u06d8\u06e1\u06ec\u06e0\u06d8\u06e1\u06d8\u06e4\u06dc\u06df\u06d8\u06d9\u06e5\u06dc\u06eb\u06df\u06ec\u06d7\u06d6"
+
+    goto :goto_3
+
+    :sswitch_1c
+    const-string v2, "\u06eb\u06db\u06e1\u06d8\u06ec\u06d6\u06d6\u06d8\u06d9\u06e4\u06e6\u06d8\u06da\u06e8\u06e8\u06d8\u06ec\u06db\u06e8\u06d8"
+
+    goto/16 :goto_0
+
+    :sswitch_1d
+    const-string v2, "\u06da\u06d9\u06e1\u06da\u06d7\u06e6\u06d8\u06d6\u06d6\u06ec\u06dc\u06d9\u06d6\u06d8\u06df\u06eb\u06e5\u06e0\u06da\u06da"
+
+    move v14, v15
+
+    goto/16 :goto_0
+
+    :sswitch_1e
+    const/4 v12, 0x0
+
+    const-string v2, "\u06e4\u06e8\u06e4\u06e4\u06d6\u06d6\u06df\u06e7\u06e5\u06df\u06e1\u06e5\u06e8\u06d7\u06e8\u06e7\u06e5\u06e1\u06d8\u06d9\u06d8\u06e5\u06d8\u06dc\u06db\u06e7"
+
+    goto/16 :goto_0
+
+    :sswitch_1f
+    const-string v2, "\u06da\u06e0\u06d6\u06e7\u06df\u06d8\u06df\u06e6\u06d8\u06e2\u06e6\u06e6\u06e2\u06d6\u06e7\u06eb\u06e7\u06d9\u06da\u06d6\u06e6\u06d8\u06e4\u06d7\u06e8\u06d8\u06db\u06e2\u06e6"
+
+    move v14, v12
+
+    goto/16 :goto_0
+
+    :sswitch_20
+    invoke-virtual/range {v18 .. v18}, Ljava/io/File;->listFiles()[Ljava/io/File;
+
+    move-result-object v11
+
+    const-string v2, "\u06ec\u06e5\u06e5\u06d9\u06da\u06dc\u06d8\u06e0\u06d7\u06d8\u06df\u06d8\u06d6\u06d8\u06e0\u06e6\u06d8\u06d8"
+
+    goto/16 :goto_0
+
+    :sswitch_21
+    sget-object v10, Lme/weishu/exp/core/Creator;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo:Ljava/lang/String;
+
+    const-string v2, "\u06ec\u06d9\u06db\u06e8\u06d9\u06e1\u06d8\u06da\u06dc\u06db\u06e1\u06e0\u06e1\u06d8\u06df\u06db\u06d8\u06e7\u06e7\u06e4\u06e7\u06eb"
+
+    goto/16 :goto_0
+
+    :sswitch_22
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "\u06e0\u06db\u06eb\u06d9\u06e4\u06dc\u06e4\u06e8\u06e7\u06d8\u06db\u06d7\u06e5\u06d8\u06ec\u06e1\u06ec\u06d8\u06d7\u06d6\u06d8\u06e4\u06d7\u06d6\u06df\u06d6"
+
+    goto/16 :goto_0
+
+    :sswitch_23
+    const-string v2, "BwUbBwIJSScMB0EwABZVTg=="
+
+    invoke-static {v2}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "\u06e5\u06e0\u06e8\u06e7\u06d7\u06d8\u06d8\u06dc\u06e6\u06e6\u06e2\u06dc\u06dc\u06e1\u06e5\u06e8\u06d7\u06d8\u06ec\u06e6\u06d9\u06e1\u06eb\u06e7\u06e8"
+
+    goto/16 :goto_0
+
+    :sswitch_24
+    move-object/from16 v0, v18
+
+    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, "\u06e7\u06e2\u06dc\u06df\u06da\u06e5\u06d8\u06e2\u06dc\u06e4\u06d8\u06e8\u06e6\u06e2\u06d9\u06e1\u06e0\u06eb\u06df\u06ec\u06eb\u06e8"
+
+    goto/16 :goto_0
+
+    :sswitch_25
+    const-string v2, "SRcaDDAFGxhfRQ=="
+
+    invoke-static {v2}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "\u06eb\u06d7\u06db\u06e2\u06e6\u06db\u06d7\u06e5\u06e0\u06d7\u06d9\u06eb\u06d6\u06d8\u06eb\u06d9\u06d8\u06ec\u06e6\u06e1\u06d7"
+
+    goto/16 :goto_0
+
+    :sswitch_26
+    invoke-static {v11}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "\u06d8\u06eb\u06d6\u06d8\u06da\u06e8\u06d8\u06e5\u06db\u06d8\u06d8\u06d8\u06e4\u06e8\u06d8\u06df\u06e1\u06df"
+
+    goto/16 :goto_0
+
+    :sswitch_27
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v10, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v2, "\u06da\u06d6\u06dc\u06dc\u06e8\u06ec\u06df\u06e1\u06db\u06e2\u06e1\u06d6\u06e1\u06e1\u06e8\u06d8\u06e1\u06e6\u06df"
+
+    goto/16 :goto_0
+
+    :sswitch_28
+    array-length v8, v11
+
+    const-string v2, "\u06d7\u06d8\u06e4\u06e0\u06d6\u06da\u06e1\u06e5\u06e5\u06db\u06d9\u06da\u06e4\u06d8\u06e6\u06e1\u06e0\u06db\u06e4\u06e4\u06e8"
+
+    goto/16 :goto_0
+
+    :sswitch_29
+    const-string v2, "\u06e2\u06ec\u06dc\u06d8\u06dc\u06e5\u06eb\u06e8\u06db\u06da\u06da\u06e4\u06da\u06e5\u06ec\u06e0\u06d8\u06d7\u06ec\u06df\u06e2\u06e8\u06d8\u06d6\u06e4\u06d8"
+
+    move v6, v7
+
+    goto/16 :goto_0
+
+    :sswitch_2a
+    const v19, 0xc1e3578
+
+    const-string v2, "\u06e4\u06e8\u06d8\u06d8\u06d7\u06e4\u06e8\u06d8\u06eb\u06e1\u06da\u06e0\u06dc\u06eb\u06dc\u06e2\u06d6\u06ec\u06da\u06e0\u06e2\u06e6\u06e5\u06e5\u06d6\u06d8\u06e6\u06d6\u06d8\u06d8"
+
+    :goto_4
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v20
+
+    xor-int v20, v20, v19
+
+    sparse-switch v20, :sswitch_data_4
+
+    goto :goto_4
+
+    :sswitch_2b
+    const-string v2, "\u06e7\u06e4\u06e7\u06e2\u06df\u06d8\u06db\u06dc\u06d6\u06d9\u06eb\u06e5\u06e7\u06e7\u06da"
+
+    goto/16 :goto_0
+
+    :cond_3
+    const-string v2, "\u06e1\u06e4\u06e8\u06df\u06dc\u06e5\u06d8\u06d7\u06d7\u06ec\u06d7\u06e5\u06e0\u06d8\u06e2\u06e6\u06e0\u06e7\u06e5\u06d8"
+
+    goto :goto_4
+
+    :sswitch_2c
+    if-ge v6, v8, :cond_3
+
+    const-string v2, "\u06dc\u06da\u06e1\u06e5\u06d9\u06e6\u06e8\u06e6\u06d9\u06db\u06dc\u06d7\u06e1\u06e4"
+
+    goto :goto_4
+
+    :sswitch_2d
+    const-string v2, "\u06e5\u06d9\u06e6\u06e8\u06d6\u06eb\u06e7\u06d8\u06e6\u06d8\u06df\u06e6\u06d8\u06d8\u06e1\u06e4\u06d9\u06dc\u06e5\u06eb\u06e4\u06e2\u06e2\u06e4"
+
+    goto :goto_4
+
+    :sswitch_2e
+    aget-object v5, v11, v6
+
+    const-string v2, "\u06e7\u06db\u06e7\u06d8\u06e5\u06e8\u06d8\u06d8\u06db\u06eb\u06d8\u06df\u06e6\u06e5\u06e2\u06e5\u06e2\u06dc\u06d8"
+
+    goto/16 :goto_0
+
+    :sswitch_2f
+    invoke-virtual {v5}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v2, "\u06e6\u06dc\u06dc\u06e8\u06dc\u06e5\u06e7\u06dc\u06e1\u06e2\u06ec\u06d6\u06d8\u06dc\u06d8\u06d9\u06e2\u06e8\u06d8\u06d8\u06e5\u06db\u06ec\u06e4\u06e5\u06d8\u06d8\u06d8\u06e6"
+
+    goto/16 :goto_0
+
+    :sswitch_30
+    const v19, 0x24baa67e
+
+    const-string v2, "\u06e5\u06d9\u06e0\u06da\u06da\u06db\u06eb\u06e6\u06dc\u06e4\u06e6\u06d8\u06df\u06db\u06e5\u06d9\u06d6\u06d8\u06dc\u06d7\u06e8\u06d8\u06d9\u06e7\u06d9"
+
+    :goto_5
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v20
+
+    xor-int v20, v20, v19
+
+    sparse-switch v20, :sswitch_data_5
+
+    goto :goto_5
+
+    :sswitch_31
+    const-string v2, "\u06e1\u06dc\u06e2\u06d7\u06e4\u06eb\u06d6\u06d6\u06da\u06e2\u06d9\u06e7\u06e1\u06dc\u06d7\u06e8\u06e1\u06d8"
+
+    goto/16 :goto_0
+
+    :cond_4
+    const-string v2, "\u06eb\u06d7\u06eb\u06e0\u06e1\u06e4\u06da\u06e5\u06e7\u06d8\u06e8\u06e1\u06e2\u06e1\u06e1\u06e6\u06df\u06dc\u06d8\u06d8\u06e6\u06db\u06d6\u06dc\u06e6\u06ec\u06e6\u06e6\u06e6"
+
+    goto :goto_5
+
+    :sswitch_32
+    if-eqz v14, :cond_4
+
+    const-string v2, "\u06d8\u06df\u06e2\u06e5\u06e2\u06da\u06e7\u06e8\u06e8\u06e1\u06e6\u06ec\u06da\u06da\u06d8\u06d8"
+
+    goto :goto_5
+
+    :sswitch_33
+    const-string v2, "\u06e6\u06e7\u06e6\u06d8\u06da\u06e7\u06df\u06d9\u06e5\u06d6\u06dc\u06db\u06d8\u06e8\u06d6\u06e7\u06d6\u06e4\u06e4\u06db\u06eb\u06d6\u06d8"
+
+    goto :goto_5
+
+    :sswitch_34
+    const-string v2, "BQ0NCwQFCl1RSxIb"
+
+    invoke-static {v2}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v19, "BQ0NCwwcUVlRU1VaGgs="
+
+    invoke-static/range {v19 .. v19}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v19
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v1, v19
+
+    invoke-static {v0, v5, v2, v1}, Lme/weishu/exp/core/Creator;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/io/File;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "\u06d8\u06da\u06dc\u06d8\u06e1\u06e7\u06e4\u06e4\u06e7\u06d7\u06e6\u06db\u06db\u06d7\u06e5\u06e4\u06dc\u06e5\u06e8\u06e7\u06e1\u06e1\u06e1\u06d9\u06d7\u06df\u06d8\u06d8"
+
+    goto/16 :goto_0
+
+    :sswitch_35
+    const v19, -0x3e700842
+
+    const-string v2, "\u06e7\u06e6\u06dc\u06d8\u06db\u06d7\u06e1\u06e8\u06e8\u06e8\u06d8\u06d7\u06e0\u06e4\u06d7\u06ec\u06e8\u06d9\u06e8\u06dc"
+
+    :goto_6
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v20
+
+    xor-int v20, v20, v19
+
+    sparse-switch v20, :sswitch_data_6
+
+    goto :goto_6
+
+    :sswitch_36
+    const-string v2, "\u06e6\u06d9\u06e6\u06d8\u06e4\u06db\u06ec\u06e5\u06ec\u06db\u06e5\u06d6\u06db\u06e2\u06d8\u06d9\u06db\u06e6\u06d8\u06da\u06df\u06da\u06e5\u06ec\u06e4"
+
+    goto :goto_6
+
+    :cond_5
+    const-string v2, "\u06e1\u06d6\u06e0\u06da\u06e1\u06d6\u06d8\u06e8\u06e7\u06e0\u06d8\u06e1\u06e1\u06db\u06e0\u06e1\u06d8\u06d8\u06da\u06d6\u06e7\u06e7\u06df\u06e0\u06ec\u06da\u06dc\u06d8\u06d6\u06d8"
+
+    goto :goto_6
+
+    :sswitch_37
+    const-string v2, "CBYCWEBBH1ME"
+
+    invoke-static {v2}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
+
+    const-string v2, "\u06d7\u06d6\u06df\u06da\u06d6\u06d6\u06d8\u06dc\u06e2\u06e1\u06d8\u06ec\u06e1\u06e4\u06e8\u06e0\u06e2\u06eb\u06d6\u06e7\u06d8\u06e0\u06e7\u06ec\u06da\u06e1\u06e4\u06e8\u06e2\u06eb"
+
+    goto :goto_6
+
+    :sswitch_38
+    const-string v2, "\u06ec\u06da\u06d6\u06d8\u06da\u06e7\u06d8\u06d8\u06ec\u06db\u06d9\u06d6\u06df\u06df\u06d9\u06e7\u06db\u06e5\u06ec\u06eb\u06e1\u06e8\u06e8\u06d8"
+
+    goto/16 :goto_0
+
+    :sswitch_39
+    const v19, -0x6e057496
+
+    const-string v2, "\u06e6\u06da\u06ec\u06d6\u06e6\u06d7\u06d9\u06e4\u06e6\u06d8\u06e5\u06dc\u06e1\u06d8\u06e5\u06e2\u06e8"
+
+    :goto_7
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v20
+
+    xor-int v20, v20, v19
+
+    sparse-switch v20, :sswitch_data_7
+
+    goto :goto_7
+
+    :sswitch_3a
+    const-string v2, "EVxZMUJY"
+
+    invoke-static {v2}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    const-string v2, "\u06d7\u06e8\u06dc\u06d8\u06e2\u06dc\u06e8\u06d8\u06da\u06ec\u06e5\u06e6\u06e5\u06d8\u06e2\u06e2\u06eb\u06d8\u06db\u06ec\u06e0\u06e7\u06d7"
+
+    goto :goto_7
+
+    :cond_6
+    const-string v2, "\u06e4\u06e0\u06df\u06e2\u06e1\u06e2\u06e5\u06e1\u06e5\u06dc\u06d6\u06db\u06d7\u06e1\u06db"
+
+    goto :goto_7
+
+    :sswitch_3b
+    const-string v2, "\u06e7\u06d6\u06eb\u06e5\u06e8\u06df\u06da\u06d6\u06d7\u06e8\u06d8\u06d9\u06d8\u06d8\u06d8\u06df\u06db\u06e2\u06da\u06db\u06d8\u06d8"
+
+    goto :goto_7
+
+    :sswitch_3c
+    const-string v2, "\u06da\u06d6\u06da\u06e0\u06e4\u06d6\u06eb\u06dc\u06e5\u06d8\u06d6\u06e5\u06d6\u06d7\u06e5\u06e6\u06d8\u06dc\u06e4"
+
+    goto/16 :goto_0
+
+    :sswitch_3d
+    const-string v2, "BQ0NCwQFCkUWCg=="
+
+    invoke-static {v2}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v19, "BQ0NCwwcUVlRSxIb"
+
+    invoke-static/range {v19 .. v19}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v19
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v1, v19
+
+    invoke-static {v0, v5, v2, v1}, Lme/weishu/exp/core/Creator;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/io/File;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "\u06e2\u06da\u06d7\u06e2\u06ec\u06d6\u06d8\u06e6\u06e8\u06e7\u06e2\u06e6\u06ec\u06e4\u06e0\u06d7\u06dc\u06e2\u06df"
+
+    goto/16 :goto_0
+
+    :sswitch_3e
+    const-string v2, "BQ0NCwQFCl1RSxIb"
+
+    invoke-static {v2}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v19, "BQ0NCwwcUVlRU1VaGgs="
+
+    invoke-static/range {v19 .. v19}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v19
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v1, v19
+
+    invoke-static {v0, v5, v2, v1}, Lme/weishu/exp/core/Creator;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/io/File;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "\u06dc\u06e4\u06e0\u06e5\u06eb\u06ec\u06e0\u06d6\u06eb\u06e5\u06d6\u06d6\u06d6\u06dc\u06d9\u06d9\u06d8\u06e6\u06d8\u06e8\u06d9\u06dc\u06e7\u06e7\u06e5\u06d8"
+
+    goto/16 :goto_0
+
+    :sswitch_3f
+    add-int/lit8 v3, v6, 0x1
+
+    const-string v2, "\u06df\u06d6\u06d7\u06e8\u06e1\u06e8\u06d8\u06ec\u06dc\u06e7\u06d8\u06d8\u06d8\u06e5\u06d8\u06e2\u06db\u06e1\u06e8\u06dc\u06e1\u06d8\u06e1\u06d6\u06d6\u06d8\u06e1\u06eb\u06da\u06e1\u06d9\u06d6"
+
+    goto/16 :goto_0
+
+    :sswitch_40
+    const-string v2, "\u06eb\u06e5\u06ec\u06e5\u06db\u06da\u06e4\u06d9\u06db\u06e0\u06e4\u06db\u06e5\u06e4\u06ec\u06d8\u06e2\u06db\u06dc\u06d9\u06e2\u06dc\u06e4\u06dc\u06d8"
+
+    move v6, v3
+
+    goto/16 :goto_0
+
+    :sswitch_41
+    const-string v2, "\u06da\u06e0\u06d6\u06e7\u06df\u06d8\u06df\u06e6\u06d8\u06e2\u06e6\u06e6\u06e2\u06d6\u06e7\u06eb\u06e7\u06d9\u06da\u06d6\u06e6\u06d8\u06e4\u06d7\u06e8\u06d8\u06db\u06e2\u06e6"
+
+    goto/16 :goto_0
+
+    :sswitch_42
+    const-string v2, "\u06e2\u06ec\u06dc\u06d8\u06dc\u06e5\u06eb\u06e8\u06db\u06da\u06da\u06e4\u06da\u06e5\u06ec\u06e0\u06d8\u06d7\u06ec\u06df\u06e2\u06e8\u06d8\u06d6\u06e4\u06d8"
+
+    goto/16 :goto_0
+
+    :sswitch_43
+    const-string v2, "\u06ec\u06e6\u06d9\u06d7\u06eb\u06df\u06e0\u06e0\u06dc\u06d8\u06ec\u06da\u06dc\u06d8\u06e4\u06e0\u06e1"
+
+    goto/16 :goto_0
+
+    :sswitch_44
+    const-string v2, "\u06e7\u06ec\u06d9\u06e2\u06e7\u06e5\u06d6\u06e5\u06d9\u06e2\u06e7\u06d8\u06ec\u06e4\u06d9\u06ec\u06d8\u06e6\u06d8\u06db\u06e7\u06e6\u06e7\u06d9\u06df"
+
+    goto/16 :goto_0
+
+    :sswitch_45
+    const-string v2, "\u06d6\u06eb\u06d7\u06d7\u06e4\u06d9\u06d8\u06db\u06e5\u06dc\u06d7\u06df\u06e6\u06eb\u06dc"
+
+    goto/16 :goto_0
+
+    :sswitch_46
+    const-string v2, "\u06dc\u06e4\u06e0\u06e5\u06eb\u06ec\u06e0\u06d6\u06eb\u06e5\u06d6\u06d6\u06d6\u06dc\u06d9\u06d9\u06d8\u06e6\u06d8\u06e8\u06d9\u06dc\u06e7\u06e7\u06e5\u06d8"
+
+    goto/16 :goto_0
+
+    :sswitch_47
+    const-string v2, "\u06e6\u06e2\u06dc\u06d8\u06d6\u06d9\u06e4\u06e1\u06d8\u06eb\u06eb\u06dc\u06df\u06e6\u06d7\u06d8\u06e2\u06e1\u06e8\u06e7\u06df\u06e1\u06d8\u06db\u06e7\u06eb\u06e4\u06e2\u06e1\u06d8"
+
+    goto/16 :goto_0
+
+    :sswitch_48
+    return-void
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7a8df975 -> :sswitch_28
+        -0x7a15be01 -> :sswitch_3f
+        -0x73bf32d6 -> :sswitch_1d
+        -0x6f8f49b8 -> :sswitch_30
+        -0x6e52a2e9 -> :sswitch_34
+        -0x6ac199a6 -> :sswitch_2f
+        -0x5bcba762 -> :sswitch_26
+        -0x54cd2dab -> :sswitch_1f
+        -0x4f77c231 -> :sswitch_24
+        -0x4c258894 -> :sswitch_2e
+        -0x4aa3317b -> :sswitch_42
+        -0x47654e5b -> :sswitch_29
+        -0x475a057f -> :sswitch_f
+        -0x40e04372 -> :sswitch_e
+        -0x39680970 -> :sswitch_45
+        -0x3122db90 -> :sswitch_39
+        -0x23130bf4 -> :sswitch_7
+        -0x1ee67694 -> :sswitch_3e
+        -0x1e4117d5 -> :sswitch_46
+        -0x1e2cd95b -> :sswitch_0
+        -0x1d16f10c -> :sswitch_3
+        -0x1c55039d -> :sswitch_12
+        -0xbaf8503 -> :sswitch_6
+        -0xadcd35d -> :sswitch_25
+        -0x9728f95 -> :sswitch_11
+        -0x7724f44 -> :sswitch_14
+        -0x2cf4378 -> :sswitch_18
+        0x665a1e0 -> :sswitch_23
+        0x8300d0c -> :sswitch_8
+        0x1032add2 -> :sswitch_4
+        0x167066f4 -> :sswitch_35
+        0x1b5ca8e6 -> :sswitch_5
+        0x228560a7 -> :sswitch_48
+        0x2a4b33d9 -> :sswitch_1
+        0x31887e4f -> :sswitch_9
+        0x3a67f04b -> :sswitch_46
+        0x3d87c219 -> :sswitch_2a
+        0x40575367 -> :sswitch_1e
+        0x4370cac6 -> :sswitch_41
+        0x48537664 -> :sswitch_20
+        0x4e51e63e -> :sswitch_21
+        0x54a99d75 -> :sswitch_13
+        0x5926cb5c -> :sswitch_40
+        0x61d8ec11 -> :sswitch_27
+        0x61ff9908 -> :sswitch_2
+        0x699c250b -> :sswitch_10
+        0x6e81c1c1 -> :sswitch_41
+        0x71d4dc82 -> :sswitch_22
+        0x7843b01a -> :sswitch_3d
+    .end sparse-switch
+
+    :sswitch_data_1
+    .sparse-switch
+        -0x7cf08f5b -> :sswitch_a
+        -0x5bc41dae -> :sswitch_d
+        -0x643d4c4 -> :sswitch_c
+        0x4c68c119 -> :sswitch_b
+    .end sparse-switch
+
+    :sswitch_data_2
+    .sparse-switch
+        -0x28a850f0 -> :sswitch_41
+        -0x26e851ba -> :sswitch_17
+        0x35a3b6db -> :sswitch_15
+        0x6699c64b -> :sswitch_16
+    .end sparse-switch
+
+    :sswitch_data_3
+    .sparse-switch
+        -0x7b74a362 -> :sswitch_1a
+        -0x5cfb55fb -> :sswitch_1c
+        0x268b8c2a -> :sswitch_1b
+        0x64781986 -> :sswitch_19
+    .end sparse-switch
+
+    :sswitch_data_4
+    .sparse-switch
+        -0x2fb07b84 -> :sswitch_2c
+        -0xc9cb7dd -> :sswitch_47
+        -0xa3068c7 -> :sswitch_2b
+        -0x9be1bcb -> :sswitch_2d
+    .end sparse-switch
+
+    :sswitch_data_5
+    .sparse-switch
+        -0x6682abeb -> :sswitch_43
+        -0x3867bb64 -> :sswitch_33
+        0x26c46923 -> :sswitch_31
+        0x50192db4 -> :sswitch_32
+    .end sparse-switch
+
+    :sswitch_data_6
+    .sparse-switch
+        -0x37417efb -> :sswitch_37
+        0xea01524 -> :sswitch_45
+        0x1e450986 -> :sswitch_38
+        0x5d9b58f9 -> :sswitch_36
+    .end sparse-switch
+
+    :sswitch_data_7
+    .sparse-switch
+        -0x6b83a4ad -> :sswitch_44
+        -0x39428e45 -> :sswitch_3a
+        -0x303b55e1 -> :sswitch_3b
+        0x696d0a57 -> :sswitch_3c
+    .end sparse-switch
+.end method
+
+.method public static create(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)Lme/weishu/exp/persistence/ExpApp;
+    .locals 10
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lme/weishu/exp/core/CreateFailedException;
+        }
+    .end annotation
+
+    # kkkzheli: fully offline create - bypass JNI nativeCreate, build ExpApp from PackageManager directly
+    # p1 = apk file path (String), p2 = split APK paths (Object/String[])
+
+    # Step 1: Ensure APK file exists
+    invoke-static {p1}, Lme/weishu/exp/util/IOUtils;->ensureExists(Ljava/lang/String;)Ljava/io/File;
+
+    # Step 2: Get PackageManager
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    move-result-object v0
+
+    # Step 3: Parse APK archive info to get package name and version
+    const/4 v1, 0x0
+    invoke-virtual {v0, p1, v1}, Landroid/content/pm/PackageManager;->getPackageArchiveInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    move-result-object v2
+
+    if-nez v2, :cond_error
+    const-string v3, "APK parse failed"
+    new-instance v4, Lme/weishu/exp/core/CreateFailedException;
+    invoke-direct {v4, v3}, Lme/weishu/exp/core/CreateFailedException;-><init>(Ljava/lang/String;)V
+    throw v4
+
+    :cond_error
+    # Step 4: Create ExpApp entity
+    new-instance v3, Lme/weishu/exp/persistence/ExpApp;
+    invoke-direct {v3}, Lme/weishu/exp/persistence/ExpApp;-><init>()V
+
+    # Set package name
+    iget-object v4, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lme/weishu/exp/persistence/ExpApp;->setPackageName(Ljava/lang/String;)V
+
+    # Set version code
+    iget v4, v2, Landroid/content/pm/PackageInfo;->versionCode:I
+    invoke-virtual {v3, v4}, Lme/weishu/exp/persistence/ExpApp;->setVersionCode(I)V
+
+    # Set version name
+    iget-object v4, v2, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lme/weishu/exp/persistence/ExpApp;->setVersionName(Ljava/lang/String;)V
+
+    # Set source paths
+    invoke-virtual {v3, p1}, Lme/weishu/exp/persistence/ExpApp;->setOriginalSource(Ljava/lang/String;)V
+    invoke-virtual {v3, p1}, Lme/weishu/exp/persistence/ExpApp;->setExpSource(Ljava/lang/String;)V
+
+    # Generate backup name
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+    move-result-object v4
+    invoke-virtual {v4}, Ljava/util/UUID;->toString()Ljava/lang/String;
+    move-result-object v4
+    invoke-virtual {v3, v4}, Lme/weishu/exp/persistence/ExpApp;->setBackupName(Ljava/lang/String;)V
+
+    # Set status to a default state
+    sget-object v4, Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo:Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;
+    invoke-virtual {v3, v4}, Lme/weishu/exp/persistence/ExpApp;->setStatus(Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;)V
+
+    # Set isExpApp to false (not yet modified)
+    invoke-virtual {v3, v1}, Lme/weishu/exp/persistence/ExpApp;->setExpApp(Z)V
+
+    # Step 5: Load display name
+    :try_start_0
+    iget-object v4, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    if-eqz v4, :cond_skip_label
+    invoke-virtual {v4, v0}, Landroid/content/pm/ApplicationInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+    move-result-object v5
+    invoke-interface {v5}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    move-result-object v5
+    invoke-virtual {v3, v5}, Lme/weishu/exp/persistence/ExpApp;->setDisplayName(Ljava/lang/String;)V
+    :cond_skip_label
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v3
+
+    :catch_0
+    move-exception v4
+    return-object v3
+.end method
+
+.method private static deleteOriginalSignatures(Ljava/io/File;)V
+    .locals 10
+
+    const/4 v6, 0x0
+
+    const/4 v2, 0x0
+
+    const-string v0, "\u06d6\u06da\u06e1\u06ec\u06e1\u06db\u06e5\u06e4\u06db\u06e7\u06e7\u06da\u06eb\u06e1\u06e2\u06e0\u06da\u06e5\u06d8\u06d8\u06e6\u06e7\u06d8"
+
+    move v1, v2
+
+    move v3, v2
+
+    move v4, v2
+
+    move-object v5, v6
+
+    move-object v7, v6
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v6
+
+    const/16 v8, 0x8c
+
+    const v9, 0x3875d87d
+
+    xor-int/2addr v6, v8
+
+    xor-int/2addr v6, v9
+
+    sparse-switch v6, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "\u06d8\u06da\u06d8\u06d8\u06e6\u06eb\u06ec\u06e6\u06e0\u06e5\u06d8\u06e8\u06da\u06e6\u06d8\u06e5\u06e4\u06d7"
+
+    goto :goto_0
+
+    :sswitch_1
+    new-instance v6, Ljava/io/File;
+
+    const-string v0, "JCE7L1klJy0="
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v6, p0, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    const-string v0, "\u06df\u06e4\u06e6\u06df\u06e5\u06dc\u06d8\u06e0\u06da\u06d8\u06e0\u06d9\u06e8\u06df\u06e7\u06e1\u06ec\u06e6\u06e7"
+
+    move-object v7, v6
+
+    goto :goto_0
+
+    :sswitch_2
+    const v6, 0x2393e935
+
+    const-string v0, "\u06d7\u06eb\u06e4\u06e1\u06e1\u06d8\u06d8\u06e8\u06eb\u06e4\u06e7\u06e0\u06db\u06d7\u06e8\u06dc\u06d9\u06e0\u06d7\u06e6\u06d9\u06d8\u06d8"
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v8
+
+    xor-int/2addr v8, v6
+
+    sparse-switch v8, :sswitch_data_1
+
+    goto :goto_1
+
+    :sswitch_3
+    invoke-virtual {v7}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "\u06d6\u06d7\u06e0\u06e4\u06e1\u06dc\u06d9\u06e8\u06e1\u06db\u06e5\u06eb\u06e7\u06d9"
+
+    goto :goto_1
+
+    :cond_0
+    const-string v0, "\u06eb\u06d8\u06e5\u06d8\u06e2\u06e2\u06e5\u06d8\u06e8\u06e6\u06dc\u06eb\u06e2\u06e8\u06da\u06dc\u06e4"
+
+    goto :goto_1
+
+    :sswitch_4
+    const-string v0, "\u06d8\u06da\u06e1\u06d8\u06e6\u06db\u06da\u06dc\u06d8\u06e8\u06d8\u06da\u06e4\u06e7\u06e0\u06db\u06eb\u06e2\u06da\u06d8"
+
+    goto :goto_1
+
+    :sswitch_5
+    const-string v0, "\u06d9\u06e2\u06e7\u06d8\u06e4\u06d6\u06d8\u06d9\u06da\u06d6\u06e0\u06d7\u06da\u06db\u06da\u06db\u06d6\u06da\u06e1\u06da"
+
+    goto :goto_0
+
+    :sswitch_6
+    sget-object v0, Lme/weishu/exp/core/-$$Lambda$Creator$ak-0Y2wD6sJlHGnaSVZoXjIdCdc;->INSTANCE:Lme/weishu/exp/core/-$$Lambda$Creator$ak-0Y2wD6sJlHGnaSVZoXjIdCdc;
+
+    invoke-virtual {v7, v0}, Ljava/io/File;->listFiles(Ljava/io/FilenameFilter;)[Ljava/io/File;
+
+    move-result-object v5
+
+    const-string v0, "\u06e7\u06e0\u06d6\u06d8\u06e7\u06db\u06d8\u06d8\u06dc\u06e2\u06e8\u06d8\u06db\u06d6\u06dc\u06ec\u06ec\u06d7\u06d9\u06e0"
+
+    goto :goto_0
+
+    :sswitch_7
+    const v6, 0x5b41bc27
+
+    const-string v0, "\u06da\u06d7\u06d7\u06e7\u06d8\u06e5\u06d8\u06e5\u06e1\u06eb\u06e8\u06e6\u06e8\u06e2\u06e5\u06d6\u06d8\u06d7\u06e1\u06e5\u06d8"
+
+    :goto_2
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v8
+
+    xor-int/2addr v8, v6
+
+    sparse-switch v8, :sswitch_data_2
+
+    goto :goto_2
+
+    :sswitch_8
+    const-string v0, "\u06e7\u06e4\u06df\u06db\u06d6\u06e8\u06d8\u06eb\u06e5\u06e8\u06d8\u06e5\u06e7\u06e1\u06ec\u06e0\u06da"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v0, "\u06d7\u06db\u06e8\u06d8\u06d6\u06e8\u06e4\u06e8\u06df\u06ec\u06e7\u06e1\u06e7\u06e5\u06ec\u06d8\u06d7\u06dc\u06e0\u06db\u06e7\u06e2"
+
+    goto :goto_2
+
+    :sswitch_9
+    if-nez v5, :cond_1
+
+    const-string v0, "\u06d9\u06e7\u06e6\u06d8\u06da\u06d8\u06e7\u06d8\u06e0\u06e5\u06eb\u06e7\u06d6\u06d8\u06d8\u06e4\u06d7\u06e2\u06e4\u06db\u06df\u06e5\u06d7\u06d8\u06dc\u06e6\u06dc\u06d8\u06dc\u06e1\u06dc\u06d8"
+
+    goto :goto_2
+
+    :sswitch_a
+    const-string v0, "\u06d7\u06eb\u06eb\u06e8\u06eb\u06ec\u06d9\u06e1\u06e4\u06d8\u06d9\u06d9\u06e5\u06e0\u06e6"
+
+    goto :goto_2
+
+    :sswitch_b
+    const-string v0, "\u06d6\u06e6\u06e2\u06d7\u06db\u06e5\u06eb\u06e5\u06d8\u06df\u06e2\u06eb\u06d8\u06e5\u06db\u06e4\u06ec\u06e7\u06e2\u06e2\u06d7\u06e1\u06e7\u06e8\u06d8\u06e0\u06e4\u06dc\u06d8"
+
+    goto :goto_0
+
+    :sswitch_c
+    sget-object v0, Lme/weishu/exp/core/Creator;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo:Ljava/lang/String;
+
+    const-string v6, "Gg0IThIFBQ4WRQgHSQoaAhhN"
+
+    invoke-static {v6}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v0, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v0, "\u06e8\u06d6\u06e4\u06e0\u06e7\u06da\u06d6\u06ec\u06e5\u06d9\u06d8\u06d6\u06dc\u06e5\u06d7\u06d6\u06eb\u06d7"
+
+    goto :goto_0
+
+    :sswitch_d
+    array-length v4, v5
+
+    const-string v0, "\u06d8\u06e5\u06e8\u06eb\u06ec\u06e4\u06e8\u06eb\u06e0\u06d7\u06e7\u06e6\u06d8\u06d6\u06da\u06e1\u06e7\u06e8\u06dc\u06dc\u06da\u06d8\u06d8\u06dc\u06eb\u06d8\u06d8"
+
+    goto :goto_0
+
+    :sswitch_e
+    const-string v0, "\u06df\u06d6\u06eb\u06ec\u06e0\u06d9\u06eb\u06e2\u06e1\u06d7\u06e1\u06d8\u06e5\u06d6\u06e5\u06df\u06e1\u06e7\u06e4\u06e8\u06e1"
+
+    goto :goto_0
+
+    :sswitch_f
+    const-string v0, "\u06df\u06da\u06e8\u06d8\u06db\u06e1\u06e6\u06eb\u06d6\u06d8\u06d8\u06db\u06ec\u06d8\u06d8\u06df\u06e4\u06e2\u06db\u06e5\u06d6\u06d8\u06ec\u06d6\u06d8\u06d8\u06e5\u06dc\u06d8\u06eb\u06ec\u06dc"
+
+    move v3, v2
+
+    goto/16 :goto_0
+
+    :sswitch_10
+    const v6, 0x3c3cdcc0
+
+    const-string v0, "\u06d9\u06e1\u06eb\u06e2\u06eb\u06db\u06e2\u06d7\u06d9\u06e1\u06d9\u06e4\u06d9\u06d9"
+
+    :goto_3
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v8
+
+    xor-int/2addr v8, v6
+
+    sparse-switch v8, :sswitch_data_3
+
+    goto :goto_3
+
+    :sswitch_11
+    const-string v0, "\u06d6\u06e7\u06e2\u06db\u06e0\u06e1\u06d8\u06e8\u06e8\u06d6\u06eb\u06e7\u06d9\u06d7\u06e1\u06d8\u06e2\u06ec\u06e6\u06d8\u06ec\u06e6\u06e1\u06d8\u06e6\u06e4\u06eb\u06ec\u06e6\u06d8"
+
+    goto/16 :goto_0
+
+    :cond_2
+    const-string v0, "\u06db\u06d7\u06e1\u06d8\u06d7\u06e6\u06d9\u06eb\u06e7\u06d7\u06e5\u06eb\u06e8\u06d8\u06e8\u06e4\u06dc\u06d7\u06e7\u06dc\u06d8"
+
+    goto :goto_3
+
+    :sswitch_12
+    if-ge v3, v4, :cond_2
+
+    const-string v0, "\u06db\u06e7\u06dc\u06e6\u06e0\u06e8\u06db\u06eb\u06db\u06e8\u06e4\u06eb\u06d7\u06dc\u06e8\u06e5\u06e5\u06e4"
+
+    goto :goto_3
+
+    :sswitch_13
+    const-string v0, "\u06e5\u06dc\u06e4\u06e1\u06d9\u06ec\u06e5\u06d8\u06e8\u06d8\u06e5\u06d9\u06e5\u06d8\u06ec\u06ec\u06e2\u06e6\u06e5\u06e2\u06d9\u06eb\u06e4\u06e5\u06e4"
+
+    goto :goto_3
+
+    :sswitch_14
+    const-string v0, "\u06e7\u06e2\u06e5\u06d8\u06d6\u06e4\u06e7\u06e0\u06da\u06e4\u06db\u06d6\u06df\u06e0\u06e0\u06e5\u06d8\u06e2\u06df\u06dc\u06d8\u06d7\u06da\u06d8\u06d8\u06e8\u06e8\u06e5\u06e8\u06e2\u06e5"
+
+    goto/16 :goto_0
+
+    :sswitch_15
+    aget-object v0, v5, v3
+
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+
+    const-string v0, "\u06ec\u06e0\u06eb\u06da\u06d9\u06e1\u06d8\u06e8\u06e6\u06e8\u06e2\u06e5\u06e6\u06d8\u06e8\u06db\u06db\u06e0\u06e2\u06eb\u06e1\u06ec\u06df"
+
+    goto/16 :goto_0
+
+    :sswitch_16
+    add-int/lit8 v1, v3, 0x1
+
+    const-string v0, "\u06d8\u06e4\u06e1\u06d8\u06da\u06d6\u06d8\u06e5\u06db\u06e8\u06d9\u06d8\u06e4\u06e2\u06eb\u06d6"
+
+    goto/16 :goto_0
+
+    :sswitch_17
+    const-string v0, "\u06e5\u06dc\u06d6\u06d8\u06eb\u06e5\u06e0\u06df\u06eb\u06d7\u06d6\u06df\u06e8\u06d8\u06d7\u06e4\u06e1\u06da\u06dc\u06ec\u06e0\u06e6\u06d8\u06d8\u06e1\u06df\u06e5\u06d7\u06e0\u06e8\u06d8"
+
+    move v3, v1
+
+    goto/16 :goto_0
+
+    :sswitch_18
+    invoke-virtual {v7}, Ljava/io/File;->mkdir()Z
+
+    const-string v0, "\u06d6\u06e7\u06e2\u06db\u06e0\u06e1\u06d8\u06e8\u06e8\u06d6\u06eb\u06e7\u06d9\u06d7\u06e1\u06d8\u06e2\u06ec\u06e6\u06d8\u06ec\u06e6\u06e1\u06d8\u06e6\u06e4\u06eb\u06ec\u06e6\u06d8"
+
+    goto/16 :goto_0
+
+    :sswitch_19
+    const-string v0, "\u06df\u06da\u06e8\u06d8\u06db\u06e1\u06e6\u06eb\u06d6\u06d8\u06d8\u06db\u06ec\u06d8\u06d8\u06df\u06e4\u06e2\u06db\u06e5\u06d6\u06d8\u06ec\u06d6\u06d8\u06d8\u06e5\u06dc\u06d8\u06eb\u06ec\u06dc"
+
+    goto/16 :goto_0
+
+    :sswitch_1a
+    const-string v0, "\u06e6\u06e5\u06e5\u06eb\u06d7\u06d6\u06d8\u06e7\u06e7\u06d7\u06ec\u06eb\u06dc\u06da\u06ec\u06d8\u06e1\u06d7"
+
+    goto/16 :goto_0
+
+    :sswitch_1b
+    return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7c8c5772 -> :sswitch_6
+        -0x58770b98 -> :sswitch_1b
+        -0x44a72e0d -> :sswitch_e
+        -0x320d59f7 -> :sswitch_1b
+        -0x1f4dc2ad -> :sswitch_7
+        -0x15cc8ef5 -> :sswitch_15
+        0x3587713 -> :sswitch_1
+        0x1e498df9 -> :sswitch_2
+        0x2431f970 -> :sswitch_17
+        0x29b73b53 -> :sswitch_18
+        0x2ebb469c -> :sswitch_19
+        0x4edc09ad -> :sswitch_10
+        0x5927b1a6 -> :sswitch_f
+        0x5f661f00 -> :sswitch_0
+        0x713e8250 -> :sswitch_16
+        0x721e58d2 -> :sswitch_c
+        0x762a67cf -> :sswitch_d
+    .end sparse-switch
+
+    :sswitch_data_1
+    .sparse-switch
+        -0x70116017 -> :sswitch_1a
+        -0x290412c0 -> :sswitch_5
+        -0x7c01864 -> :sswitch_3
+        0x5c613554 -> :sswitch_4
+    .end sparse-switch
+
+    :sswitch_data_2
+    .sparse-switch
+        -0x5b6331d7 -> :sswitch_a
+        -0x19fbb9c4 -> :sswitch_9
+        -0x17fe29e6 -> :sswitch_b
+        0x71b86891 -> :sswitch_8
+    .end sparse-switch
+
+    :sswitch_data_3
+    .sparse-switch
+        -0x6da52b09 -> :sswitch_12
+        -0xc766e5d -> :sswitch_13
+        0x13dae792 -> :sswitch_11
+        0x3e8c727f -> :sswitch_14
+    .end sparse-switch
+.end method
+
+.method private static editManifest(Ljava/io/File;Ljava/lang/String;)V
+    .locals 7
+
+    const/4 v2, 0x0
+
+    new-instance v3, Ljava/io/File;
+
+    const-string v0, "KAoLHBsFDSYECwgSDBcbQAwBBQ=="
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v3, p0, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    :try_start_0
+    new-instance v1, Ljava/io/FileInputStream;
+
+    invoke-direct {v1, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_3
+
+    :try_start_1
+    invoke-static {v1, p1}, Lexp/aob;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/io/InputStream;Ljava/lang/String;)[B
+
+    move-result-object v4
+
+    invoke-static {v1}, Lme/weishu/exp/util/IOUtils;->closeSilently(Ljava/io/Closeable;)V
+
+    const v5, 0x174a338a
+
+    const-string v0, "\u06e5\u06db\u06e5\u06d9\u06e4\u06e7\u06e4\u06e7\u06e1\u06d8\u06d9\u06ec\u06d9\u06e1\u06d8\u06eb\u06dc\u06e6\u06d8\u06e1\u06d7\u06d8\u06d7\u06e7\u06e5"
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    move-result v6
+
+    xor-int/2addr v6, v5
+
+    sparse-switch v6, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    :try_start_2
+    new-instance v1, Ljava/io/FileOutputStream;
+
+    invoke-direct {v1, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_4
+
+    :try_start_3
+    invoke-virtual {v1, v4}, Ljava/io/FileOutputStream;->write([B)V
+
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->flush()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    invoke-static {v1}, Lme/weishu/exp/util/IOUtils;->closeSilently(Ljava/io/Closeable;)V
+
+    :sswitch_1
+    return-void
+
+    :cond_0
+    :try_start_4
+    const-string v0, "\u06e6\u06ec\u06e5\u06d8\u06df\u06e2\u06d6\u06d8\u06ec\u06e7\u06e0\u06ec\u06e5\u06d8\u06da\u06ec\u06e6\u06d8\u06db\u06d7\u06e1\u06d8\u06e6\u06e7\u06dc\u06d8\u06db\u06e7\u06d8"
+
+    goto :goto_0
+
+    :sswitch_2
+    if-eqz v4, :cond_0
+
+    const-string v0, "\u06da\u06e5\u06e2\u06d6\u06df\u06d6\u06ec\u06e4\u06e5\u06d8\u06da\u06eb\u06e0\u06e1\u06eb\u06d8\u06d6\u06d8"
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "\u06dc\u06e8\u06da\u06e4\u06d7\u06e7\u06d7\u06e1\u06db\u06e6\u06d7\u06eb\u06e4\u06eb\u06e6\u06d8\u06e1\u06da\u06e0\u06d6\u06d7\u06eb"
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    move-object v1, v2
+
+    :goto_1
+    :try_start_5
+    new-instance v2, Lme/weishu/exp/core/CreateFailedException;
+
+    const-string v3, "HhYGGhFMDQ4dRQcdBQFPCBUFBQ4B"
+
+    invoke-static {v3}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3, v0}, Lme/weishu/exp/core/CreateFailedException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v2
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    move-object v2, v1
+
+    :goto_2
+    invoke-static {v2}, Lme/weishu/exp/util/IOUtils;->closeSilently(Ljava/io/Closeable;)V
+
+    throw v0
+
+    :catch_1
+    move-exception v0
+
+    move-object v2, v1
+
+    :goto_3
+    :try_start_6
+    new-instance v1, Lme/weishu/exp/core/CreateFailedException;
+
+    const-string v3, "AAocCwYYSQ4LERMNSQcDDwcfSQ0EDA0RDQ=="
+
+    invoke-static {v3}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v1, v3, v0}, Lme/weishu/exp/core/CreateFailedException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
+
+    :catchall_1
+    move-exception v0
+
+    :goto_4
+    invoke-static {v2}, Lme/weishu/exp/util/IOUtils;->closeSilently(Ljava/io/Closeable;)V
+
+    throw v0
+
+    :catchall_2
+    move-exception v0
+
+    move-object v2, v1
+
+    goto :goto_4
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_3
+
+    :catchall_3
+    move-exception v0
+
+    goto :goto_4
+
+    :catchall_4
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_1
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x6ee6675a -> :sswitch_2
+        0x31203c48 -> :sswitch_3
+        0x67b4b92a -> :sswitch_1
+        0x7ffe5ac1 -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method private static fixManifest(Landroid/content/pm/ApplicationInfo;Ljava/io/File;)V
+    .locals 4
+
+    const-string v0, "\u06d6\u06ec\u06d6\u06d8\u06d9\u06db\u06e1\u06d8\u06e4\u06da\u06dc\u06d8\u06e1\u06e8\u06e4\u06eb\u06db\u06dc\u06d8"
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    const/16 v2, 0x345
+
+    const v3, -0x2574c0af
+
+    xor-int/2addr v1, v2
+
+    xor-int/2addr v1, v3
+
+    sparse-switch v1, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "\u06e1\u06e0\u06e6\u06d8\u06e5\u06db\u06e6\u06e4\u06d9\u06e5\u06e7\u06d8\u06e5\u06dc\u06df\u06e7\u06e2\u06d6\u06e7\u06d8\u06ec\u06d7\u06da"
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "\u06e5\u06da\u06e2\u06d7\u06da\u06e1\u06d8\u06e1\u06e4\u06e5\u06dc\u06d7\u06e1\u06d7\u06e5\u06e6\u06d6\u06dc\u06d8"
+
+    goto :goto_0
+
+    :sswitch_2
+    const v1, -0x6f0722c4
+
+    const-string v0, "\u06da\u06e8\u06e7\u06e4\u06db\u06eb\u06df\u06d6\u06df\u06e8\u06e6\u06e5\u06d8\u06e8\u06d6\u06d7\u06d9\u06e6\u06e5\u06d8\u06d8\u06d6\u06d8\u06da\u06e1\u06d6\u06dc\u06dc"
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v2, v1
+
+    sparse-switch v2, :sswitch_data_1
+
+    goto :goto_1
+
+    :sswitch_3
+    if-nez p0, :cond_0
+
+    const-string v0, "\u06d9\u06eb\u06e2\u06e0\u06ec\u06e0\u06eb\u06d7\u06eb\u06d6\u06d8\u06da\u06dc\u06db\u06e4\u06e7\u06e5\u06e8\u06d8\u06dc\u06d9\u06e7"
+
+    goto :goto_1
+
+    :cond_0
+    const-string v0, "\u06d8\u06df\u06da\u06e0\u06e6\u06e7\u06d6\u06dc\u06d7\u06e1\u06e4\u06d8\u06e5\u06e5\u06db\u06e6\u06da\u06e8\u06e2\u06e4\u06d9\u06e6\u06e0\u06e7"
+
+    goto :goto_1
+
+    :sswitch_4
+    const-string v0, "\u06db\u06d9\u06d9\u06df\u06ec\u06d8\u06d7\u06df\u06db\u06e8\u06dc\u06df\u06dc\u06e7\u06d7\u06d9\u06e8\u06dc\u06d8\u06e2\u06e4\u06e0\u06d8\u06d7\u06db\u06da\u06df\u06da"
+
+    goto :goto_1
+
+    :sswitch_5
+    const-string v0, "\u06e7\u06d6\u06e5\u06ec\u06da\u06e0\u06dc\u06e6\u06e8\u06df\u06eb\u06d7\u06eb\u06e8\u06e1\u06d8"
+
+    goto :goto_0
+
+    :sswitch_6
+    const v1, 0x53988581
+
+    const-string v0, "\u06e0\u06e7\u06d9\u06d8\u06e7\u06e8\u06df\u06e5\u06e7\u06d8\u06e1\u06d8\u06d6\u06d8\u06e4\u06d6\u06ec\u06e8\u06e2\u06da\u06eb\u06ec\u06db"
+
+    :goto_2
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v2, v1
+
+    sparse-switch v2, :sswitch_data_2
+
+    goto :goto_2
+
+    :sswitch_7
+    const-string v0, "\u06e2\u06d9\u06d6\u06d8\u06d6\u06e4\u06eb\u06d9\u06e1\u06e4\u06e7\u06e7\u06d6\u06e2\u06e0\u06e8\u06ec\u06e5\u06e7\u06e0\u06d6\u06d8\u06d8\u06df\u06e6\u06d8"
+
+    goto :goto_2
+
+    :cond_1
+    const-string v0, "\u06d9\u06dc\u06e6\u06e5\u06ec\u06d6\u06d8\u06e6\u06d9\u06e8\u06d6\u06e6\u06d7\u06ec\u06da\u06e6\u06d6\u06e8\u06e8\u06e4\u06e0"
+
+    goto :goto_2
+
+    :sswitch_8
+    iget v0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    const/high16 v2, 0x10000000
+
+    and-int/2addr v0, v2
+
+    if-nez v0, :cond_1
+
+    const-string v0, "\u06e4\u06eb\u06e4\u06eb\u06e1\u06d8\u06da\u06da\u06e1\u06d7\u06db\u06e5\u06e0\u06e7\u06eb\u06da\u06e6\u06e7\u06d8"
+
+    goto :goto_2
+
+    :sswitch_9
+    const-string v0, "\u06d9\u06e8\u06e5\u06eb\u06d6\u06da\u06e2\u06e6\u06eb\u06e6\u06e6\u06e2\u06eb\u06e0\u06d9\u06d7\u06df\u06e5\u06e5\u06eb"
+
+    goto :goto_0
+
+    :sswitch_a
+    invoke-static {p1}, Lme/weishu/exp/core/Creator;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/io/File;)V
+
+    const-string v0, "\u06e1\u06e5\u06e2\u06d7\u06eb\u06ec\u06d9\u06d8\u06da\u06d8\u06e8\u06e1\u06d8\u06e4\u06d7\u06d6"
+
+    goto :goto_0
+
+    :sswitch_b
+    const-string v0, "\u06d7\u06e8\u06e6\u06da\u06dc\u06ec\u06da\u06e0\u06dc\u06e0\u06e5\u06e0\u06d9\u06d6\u06d8\u06d7\u06eb\u06db"
+
+    goto :goto_0
+
+    :sswitch_c
+    const-string v0, "\u06e1\u06e5\u06e2\u06d7\u06eb\u06ec\u06d9\u06d8\u06da\u06d8\u06e8\u06e1\u06d8\u06e4\u06d7\u06d6"
+
+    goto :goto_0
+
+    :sswitch_d
+    return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x779400d7 -> :sswitch_d
+        -0x6e5d6303 -> :sswitch_1
+        -0x53dfb5d1 -> :sswitch_d
+        -0x2c7a84f -> :sswitch_2
+        0xd00d127 -> :sswitch_a
+        0x394a0b12 -> :sswitch_6
+        0x5e187bd2 -> :sswitch_0
+    .end sparse-switch
+
+    :sswitch_data_1
+    .sparse-switch
+        -0x6e39776c -> :sswitch_5
+        -0x50349483 -> :sswitch_b
+        0x5e9c7028 -> :sswitch_4
+        0x6385f8bc -> :sswitch_3
+    .end sparse-switch
+
+    :sswitch_data_2
+    .sparse-switch
+        -0x61116a84 -> :sswitch_8
+        -0x16ffe1c7 -> :sswitch_c
+        -0x1587a3a3 -> :sswitch_7
+        0x22dedbb8 -> :sswitch_9
+    .end sparse-switch
+.end method
+
+.method private static getDexFiles(Ljava/io/File;)[Ljava/io/File;
+    .locals 5
+
+    const/4 v1, 0x0
+
+    const-string v0, "\u06eb\u06df\u06e8\u06df\u06e1\u06eb\u06e8\u06df\u06dc\u06d8\u06ec\u06e1\u06d8\u06dc\u06dc\u06e7\u06d8\u06d6\u06e5\u06e8\u06d8\u06e2\u06e2\u06e4\u06da\u06ec\u06d7"
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    const/16 v3, 0x36c
+
+    const v4, -0x61f7d48e
+
+    xor-int/2addr v2, v3
+
+    xor-int/2addr v2, v4
+
+    sparse-switch v2, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "\u06dc\u06e5\u06e1\u06e6\u06eb\u06e1\u06d8\u06e5\u06da\u06e6\u06d8\u06d6\u06e8\u06d6\u06e2\u06e7\u06e8"
+
+    goto :goto_0
+
+    :sswitch_1
+    sget-object v0, Lme/weishu/exp/core/-$$Lambda$Creator$BLieErCSPLMFGBUhWPcz8zPImCk;->INSTANCE:Lme/weishu/exp/core/-$$Lambda$Creator$BLieErCSPLMFGBUhWPcz8zPImCk;
+
+    invoke-virtual {p0, v0}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
+
+    move-result-object v1
+
+    const-string v0, "\u06e6\u06e8\u06da\u06e0\u06db\u06d7\u06da\u06da\u06e2\u06e5\u06df\u06d9\u06e1\u06e2\u06da\u06dc\u06e6\u06d8\u06da\u06d9\u06e6"
+
+    goto :goto_0
+
+    :sswitch_2
+    sget-object v0, Lme/weishu/exp/core/-$$Lambda$Creator$8yoRAo_g47_LrJ6-lUkRahSXKcY;->INSTANCE:Lme/weishu/exp/core/-$$Lambda$Creator$8yoRAo_g47_LrJ6-lUkRahSXKcY;
+
+    invoke-static {v1, v0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
+
+    const-string v0, "\u06da\u06e0\u06d8\u06d8\u06ec\u06e1\u06da\u06ec\u06d7\u06e6\u06d8\u06e8\u06e5\u06e0\u06e0\u06e6\u06e8\u06df\u06dc\u06df"
+
+    goto :goto_0
+
+    :sswitch_3
+    return-object v1
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x4fcf4711 -> :sswitch_2
+        -0x183bc7bc -> :sswitch_1
+        -0x1103d6ae -> :sswitch_0
+        0x44b37939 -> :sswitch_3
+    .end sparse-switch
+.end method
+
+.method public static native i(Ljava/lang/String;Ljava/lang/String;I)V
+.end method
+
+.method public static native j()Z
+.end method
+
+.method public static synthetic lambda$8yoRAo_g47_LrJ6-lUkRahSXKcY(Ljava/io/File;Ljava/io/File;)I
+    .locals 4
+
+    const-string v0, "\u06ec\u06ec\u06e5\u06d8\u06e6\u06e8\u06e6\u06d8\u06d6\u06df\u06e7\u06e1\u06da\u06eb\u06eb\u06e6\u06ec\u06e6\u06e6\u06db\u06d7\u06db\u06d8\u06d8"
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    const/16 v2, 0x389
+
+    const v3, 0x6d44adce
+
+    xor-int/2addr v1, v2
+
+    xor-int/2addr v1, v3
+
+    sparse-switch v1, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "\u06e8\u06e2\u06e1\u06e2\u06e4\u06df\u06d7\u06e5\u06e8\u06d8\u06e0\u06e1\u06e4\u06e8\u06e4\u06da"
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "\u06e6\u06e2\u06d9\u06e6\u06df\u06e1\u06d8\u06db\u06dc\u06da\u06e1\u06d6\u06d8\u06ec\u06e5\u06dc\u06ec\u06e7\u06e7\u06d7\u06eb\u06d8\u06da\u06d6\u06e8\u06e2\u06d8\u06e5\u06d8"
+
+    goto :goto_0
+
+    :sswitch_2
+    invoke-static {p0, p1}, Lme/weishu/exp/core/Creator;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/io/File;Ljava/io/File;)I
+
+    move-result v0
+
+    return v0
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x27321452 -> :sswitch_0
+        0x6b38c68 -> :sswitch_1
+        0x14083a96 -> :sswitch_2
+    .end sparse-switch
+.end method
+
+.method public static synthetic lambda$BLieErCSPLMFGBUhWPcz8zPImCk(Ljava/io/File;)Z
+    .locals 4
+
+    const-string v0, "\u06da\u06e7\u06d6\u06d8\u06e5\u06db\u06eb\u06e6\u06d9\u06e4\u06e5\u06d7\u06ec\u06eb\u06d8\u06d8\u06e2\u06e6\u06d8\u06dc\u06db\u06da\u06d9\u06d9\u06e6\u06d8\u06e4\u06da\u06d6"
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    const/16 v2, 0x31d
+
+    const v3, 0x6e611115
+
+    xor-int/2addr v1, v2
+
+    xor-int/2addr v1, v3
+
+    sparse-switch v1, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "\u06e1\u06d8\u06db\u06e5\u06e0\u06d9\u06d8\u06e8\u06e8\u06d8\u06e8\u06db\u06e0\u06d7\u06ec\u06d8\u06d7\u06e5\u06e2\u06e8\u06e1\u06e8\u06d8\u06e2\u06d7\u06e6\u06d8\u06e8\u06e2\u06d8"
+
+    goto :goto_0
+
+    :sswitch_1
+    invoke-static {p0}, Lme/weishu/exp/core/Creator;->O0oo0oO00o00oo0o0000o00o000o00o00o00oO(Ljava/io/File;)Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x4780b7de -> :sswitch_1
+        0x5898e703 -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method public static synthetic lambda$FNuE-hYAXhBBFV-rFLzfaCGaPo0(Ljava/io/File;Ljava/lang/String;)Z
+    .locals 4
+
+    const-string v0, "\u06d9\u06e7\u06d7\u06db\u06e5\u06da\u06db\u06da\u06d6\u06e1\u06e6\u06ec\u06d9\u06e5\u06db\u06d8\u06dc\u06e5\u06e5\u06d8\u06e8\u06e2\u06d8\u06e0\u06d6\u06e5"
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    const/16 v2, 0x93
+
+    const v3, -0x1a2cf809
+
+    xor-int/2addr v1, v2
+
+    xor-int/2addr v1, v3
+
+    sparse-switch v1, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "\u06d6\u06db\u06dc\u06d8\u06e2\u06eb\u06e8\u06db\u06df\u06d8\u06da\u06dc\u06e6\u06e1\u06ec\u06d8\u06e6\u06df\u06dc\u06d8"
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "\u06dc\u06e2\u06d9\u06e2\u06e8\u06e6\u06e1\u06e6\u06d8\u06e5\u06e1\u06ec\u06e8\u06d7\u06d7\u06e7\u06d9\u06e6\u06d8\u06eb\u06db\u06e4"
+
+    goto :goto_0
+
+    :sswitch_2
+    invoke-static {p0, p1}, Lme/weishu/exp/core/Creator;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/io/File;Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7dd6518a -> :sswitch_2
+        -0x2575e330 -> :sswitch_1
+        -0x12ffde57 -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method public static synthetic lambda$ak-0Y2wD6sJlHGnaSVZoXjIdCdc(Ljava/io/File;Ljava/lang/String;)Z
+    .locals 4
+
+    const-string v0, "\u06d6\u06df\u06d8\u06d8\u06d7\u06dc\u06e8\u06d8\u06e0\u06d8\u06df\u06e6\u06e6\u06e6\u06d8\u06e1\u06ec\u06dc\u06e8\u06e4\u06d6\u06d8\u06eb\u06e0\u06e1\u06d8\u06e7\u06df\u06da"
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    const/16 v2, 0x3ba
+
+    const v3, -0x3ed1ca4c
+
+    xor-int/2addr v1, v2
+
+    xor-int/2addr v1, v3
+
+    sparse-switch v1, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "\u06d6\u06d6\u06e7\u06e2\u06e2\u06e7\u06d6\u06db\u06e1\u06ec\u06eb\u06e2\u06dc\u06d9\u06d8\u06d8\u06dc\u06d6\u06e5\u06e8\u06e8\u06d7"
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "\u06e5\u06d6\u06ec\u06d9\u06e8\u06e7\u06d8\u06db\u06d7\u06dc\u06e2\u06dc\u06e5\u06d8\u06d8\u06e8\u06d8\u06d8\u06dc\u06d8\u06d8\u06ec\u06d8\u06e4\u06e5\u06df\u06e8\u06d8"
+
+    goto :goto_0
+
+    :sswitch_2
+    invoke-static {p0, p1}, Lme/weishu/exp/core/Creator;->O0oo0oO00o00oo0o0000o00o000o00o00o00oO(Ljava/io/File;Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7b26721a -> :sswitch_2
+        -0x48e225c2 -> :sswitch_1
+        0x1ddc416c -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method public static native m(Landroid/content/Context;Ljava/lang/String;)Z
+.end method
+
+.method public static magiskAddApps(Ljava/util/Collection;)Ljava/util/Collection;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Collection",
+            "<",
+            "Lme/weishu/exp/persistence/ExpApp;",
+            ">;)",
+            "Ljava/util/Collection",
+            "<",
+            "Lme/weishu/exp/persistence/ExpApp;",
+            ">;"
+        }
+    .end annotation
+
+    const v1, -0xd012e7c
+
+    const-string v0, "\u06e2\u06e2\u06dc\u06d8\u06e6\u06ec\u06e6\u06d8\u06d6\u06e4\u06df\u06ec\u06d9\u06e0\u06e2\u06e5\u06e7\u06d8\u06d6\u06d8\u06da"
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v2, v1
+
+    sparse-switch v2, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "\u06da\u06df\u06d6\u06e1\u06e4\u06df\u06e8\u06e7\u06e8\u06da\u06d8\u06d8\u06e6\u06dc\u06e5\u06d8\u06db\u06d9\u06d6"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "\u06e6\u06e4\u06d8\u06e6\u06eb\u06d8\u06e7\u06e0\u06da\u06df\u06e2\u06d8\u06d8\u06df\u06e1\u06dc\u06d8\u06e5\u06e6\u06dc\u06d8\u06d6\u06e4\u06da\u06d9\u06e4\u06e8"
+
+    goto :goto_0
+
+    :sswitch_1
+    invoke-static {}, Lme/weishu/exp/core/Creator;->n()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "\u06dc\u06e8\u06e1\u06e6\u06e8\u06e1\u06d8\u06e2\u06d8\u06d8\u06e8\u06ec\u06d9\u06e7\u06e5\u06e2\u06e6\u06d8\u06d8\u06db\u06da\u06e8\u06e7\u06d8\u06e5\u06e6\u06e1"
+
+    goto :goto_0
+
+    :sswitch_2
+    invoke-static {}, Lme/weishu/exposed/MagiskServer;->getService()Lexp/aqg;
+
+    move-result-object v2
+
+    const v1, 0x707f4ef3
+
+    const-string v0, "\u06e2\u06d9\u06e5\u06d8\u06df\u06da\u06e0\u06e6\u06e5\u06df\u06ec\u06ec\u06d8\u06d8\u06e7\u06eb\u06dc\u06e4\u06dc\u06e5\u06e2\u06d7\u06e1\u06d9\u06e2\u06d8\u06e1\u06da\u06e1\u06d8"
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    xor-int/2addr v3, v1
+
+    sparse-switch v3, :sswitch_data_1
+
+    goto :goto_1
+
+    :sswitch_3
+    invoke-interface {p0}, Ljava/util/Collection;->size()I
+
+    move-result v0
+
+    new-array v3, v0, [Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    move v1, v0
+
+    :goto_2
+    const v5, -0x6ef32618
+
+    const-string v0, "\u06db\u06e7\u06e5\u06d8\u06df\u06db\u06eb\u06e6\u06e8\u06e1\u06d8\u06db\u06df\u06e5\u06d6\u06ec\u06e8\u06df\u06d7\u06e8\u06d7\u06da\u06e1\u06e2\u06e5\u06e2"
+
+    :goto_3
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v6
+
+    xor-int/2addr v6, v5
+
+    sparse-switch v6, :sswitch_data_2
+
+    goto :goto_3
+
+    :sswitch_4
+    const-string v0, "\u06e7\u06df\u06d6\u06db\u06d8\u06d7\u06eb\u06dc\u06ec\u06d6\u06d9\u06e6\u06d9\u06e5\u06d8\u06e8\u06dc\u06e6\u06e5\u06e8\u06e4\u06eb\u06e4\u06e7\u06df\u06d7\u06e1"
+
+    goto :goto_3
+
+    :cond_1
+    const-string v0, "\u06e0\u06e6\u06df\u06e7\u06e0\u06dc\u06d8\u06eb\u06e1\u06ec\u06dc\u06e7\u06dc\u06d8\u06da\u06d6\u06eb\u06d7\u06e0\u06d7"
+
+    goto :goto_1
+
+    :sswitch_5
+    if-eqz v2, :cond_1
+
+    const-string v0, "\u06da\u06e7\u06e1\u06d8\u06dc\u06df\u06e8\u06da\u06df\u06d8\u06e1\u06ec\u06e5\u06db\u06da\u06e7\u06e0\u06e7\u06da\u06d8\u06e4\u06e4"
+
+    goto :goto_1
+
+    :sswitch_6
+    const-string v0, "\u06da\u06db\u06d6\u06d8\u06e4\u06e1\u06da\u06e1\u06df\u06e6\u06d8\u06e8\u06e7\u06e5\u06d8\u06d6\u06e6\u06e1\u06d8\u06d6\u06eb\u06e5\u06d8"
+
+    goto :goto_1
+
+    :cond_2
+    const-string v0, "\u06e6\u06e5\u06d7\u06da\u06e0\u06e6\u06d8\u06e5\u06eb\u06d6\u06e1\u06d8\u06e7\u06e2\u06d6\u06e5\u06db\u06e1\u06e1\u06e2\u06e1\u06d6\u06d8\u06e2\u06df"
+
+    goto :goto_3
+
+    :sswitch_7
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const-string v0, "\u06d6\u06db\u06e1\u06eb\u06d9\u06e5\u06d8\u06e1\u06e4\u06d8\u06eb\u06d7\u06e7\u06e5\u06e4\u06e4\u06d7\u06e8\u06df\u06df\u06e5\u06e6\u06d8\u06e4\u06df\u06e1\u06d8\u06eb\u06d9\u06dc\u06d8"
+
+    goto :goto_3
+
+    :sswitch_8
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lme/weishu/exp/persistence/ExpApp;
+
+    invoke-virtual {v0}, Lme/weishu/exp/persistence/ExpApp;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v3, v1
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_2
+
+    :sswitch_9
+    :try_start_0
+    invoke-interface {v2, v3}, Lexp/aqg;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo([Ljava/lang/String;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :sswitch_a
+    return-object p0
+
+    :catchall_0
+    move-exception v0
+
+    new-instance v1, Lme/weishu/exp/core/CreateFailedException;
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Lme/weishu/exp/core/CreateFailedException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :sswitch_b
+    new-instance v0, Lme/weishu/exp/core/CreateFailedException;
+
+    const-string v1, "DkQcThI="
+
+    invoke-static {v1}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lme/weishu/exp/core/CreateFailedException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x58f9ce13 -> :sswitch_0
+        -0x51bd046d -> :sswitch_2
+        -0xc621729 -> :sswitch_a
+        0x6d0d7dea -> :sswitch_1
+    .end sparse-switch
+
+    :sswitch_data_1
+    .sparse-switch
+        -0x538cb1e3 -> :sswitch_b
+        0x1b44aaf8 -> :sswitch_3
+        0x3ecaf5de -> :sswitch_5
+        0x6fb14136 -> :sswitch_6
+    .end sparse-switch
+
+    :sswitch_data_2
+    .sparse-switch
+        -0x7cb8dc50 -> :sswitch_9
+        -0x7680bda6 -> :sswitch_8
+        0x10477be8 -> :sswitch_4
+        0x506c5adf -> :sswitch_7
+    .end sparse-switch
+.end method
+
+.method public static n()Z
+    .locals 1
+    # kkkzheli: bypass signature-dependent JNI
+    const/4 v0, 0x1
+    return v0
+.end method
+
+.method private static native nativeCreate(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)Lme/weishu/exp/persistence/ExpApp;
+.end method
+
+.method public static native o(Ljava/lang/Object;)Ljava/lang/String;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end method
+
+.method private static synthetic o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/io/File;Ljava/io/File;)I
+    .locals 8
+
+    const/4 v5, 0x0
+
+    const/4 v2, 0x0
+
+    const-string v0, "\u06dc\u06d8\u06e7\u06e0\u06e8\u06da\u06d7\u06da\u06e0\u06ec\u06df\u06d7\u06e5\u06d9\u06e7\u06ec\u06e8\u06dc\u06d8\u06d6\u06e2\u06d8\u06d8\u06e6\u06d7\u06e6\u06db\u06d9"
+
+    move v1, v2
+
+    move v3, v2
+
+    move-object v4, v5
+
+    move-object v6, v5
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    const/16 v5, 0x2dc
+
+    const v7, -0x30b00918
+
+    xor-int/2addr v2, v5
+
+    xor-int/2addr v2, v7
+
+    sparse-switch v2, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "\u06e0\u06e1\u06e0\u06d9\u06e8\u06eb\u06d9\u06e0\u06e5\u06d8\u06d7\u06e7\u06dc\u06d9\u06d6\u06dc\u06ec\u06e0\u06d8\u06d8\u06e0\u06dc\u06e4\u06e8\u06ec\u06e1\u06d8"
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "\u06e1\u06d7\u06d6\u06d9\u06d6\u06d7\u06e8\u06e2\u06e8\u06e6\u06e4\u06da\u06e8\u06d8\u06e5"
+
+    goto :goto_0
+
+    :sswitch_2
+    invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v0, "\u06dc\u06e0\u06d6\u06d8\u06dc\u06db\u06e8\u06df\u06df\u06d9\u06d8\u06e4\u06e2\u06e1\u06e2\u06db\u06eb\u06e1"
+
+    move-object v6, v5
+
+    goto :goto_0
+
+    :sswitch_3
+    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v0, "\u06db\u06db\u06eb\u06db\u06e5\u06db\u06db\u06d9\u06e5\u06e7\u06e1\u06ec\u06e6\u06db\u06d7\u06e7\u06db\u06d6\u06d8\u06eb\u06ec\u06dc\u06d8"
+
+    move-object v4, v2
+
+    goto :goto_0
+
+    :sswitch_4
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    const-string v0, "\u06d9\u06e2\u06da\u06e0\u06d9\u06e1\u06d8\u06d8\u06eb\u06e8\u06d8\u06ec\u06df\u06da\u06e7\u06df\u06ec\u06eb\u06dc\u06d9"
+
+    move v3, v2
+
+    goto :goto_0
+
+    :sswitch_5
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    const-string v0, "\u06e5\u06ec\u06dc\u06d8\u06ec\u06e5\u06e2\u06e8\u06d8\u06e1\u06d8\u06dc\u06e8\u06d8\u06d8\u06e5\u06da\u06e5\u06d7\u06d6\u06e8\u06d8\u06ec\u06e6\u06df\u06eb\u06ec\u06dc\u06d8"
+
+    goto :goto_0
+
+    :sswitch_6
+    const v2, -0x11888af8
+
+    const-string v0, "\u06e8\u06d6\u06e7\u06ec\u06e7\u06d6\u06e2\u06d9\u06d7\u06e4\u06dc\u06e7\u06d8\u06e1\u06e6\u06e1\u06e4\u06dc\u06d9\u06da\u06e6\u06d9\u06db\u06e4\u06eb\u06e1\u06eb\u06d7"
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v5
+
+    xor-int/2addr v5, v2
+
+    sparse-switch v5, :sswitch_data_1
+
+    goto :goto_1
+
+    :sswitch_7
+    const-string v0, "\u06e1\u06eb\u06ec\u06d8\u06e4\u06d7\u06e7\u06e2\u06d9\u06ec\u06e8\u06d9\u06d9\u06e5\u06e6\u06d8\u06d9\u06d9\u06dc\u06d8\u06d7\u06e2\u06e5\u06e1\u06e6\u06e2"
+
+    goto :goto_1
+
+    :cond_0
+    const-string v0, "\u06d7\u06d7\u06e4\u06ec\u06e8\u06d6\u06d8\u06d9\u06e7\u06e8\u06d8\u06e4\u06da\u06e5\u06d8\u06df\u06e7\u06dc\u06e4\u06e8\u06ec"
+
+    goto :goto_1
+
+    :sswitch_8
+    if-ne v3, v1, :cond_0
+
+    const-string v0, "\u06df\u06ec\u06e8\u06d8\u06e4\u06d8\u06e4\u06e7\u06d6\u06d8\u06d6\u06e8\u06d6\u06d6\u06e7\u06e6\u06d8\u06ec\u06da\u06ec\u06e6\u06e0\u06d8\u06d8\u06d6\u06d6\u06e6\u06df\u06df\u06e8\u06d8"
+
+    goto :goto_1
+
+    :sswitch_9
+    const-string v0, "\u06e0\u06e5\u06e8\u06e0\u06e2\u06e0\u06db\u06e5\u06d6\u06e5\u06eb\u06e6\u06d8\u06e1\u06d9\u06df\u06ec\u06d8\u06e1"
+
+    goto :goto_0
+
+    :sswitch_a
+    invoke-virtual {v6, v4}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result v0
+
+    :goto_2
+    return v0
+
+    :sswitch_b
+    sub-int v0, v3, v1
+
+    goto :goto_2
+
+    :sswitch_c
+    const-string v0, "\u06e0\u06e5\u06e0\u06d7\u06ec\u06e0\u06e0\u06e8\u06d8\u06d8\u06df\u06dc\u06e7\u06d8\u06d6\u06e0\u06da\u06eb\u06e2\u06e1\u06e8\u06da\u06e5\u06e7\u06df\u06df"
+
+    goto :goto_0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7f399167 -> :sswitch_2
+        -0x72596b30 -> :sswitch_4
+        -0x6da3c000 -> :sswitch_b
+        -0x25bc39bd -> :sswitch_a
+        0x1bf7e7c4 -> :sswitch_3
+        0x23f9bc03 -> :sswitch_5
+        0x36850748 -> :sswitch_6
+        0x6285d07e -> :sswitch_0
+        0x68cdb7d1 -> :sswitch_1
+    .end sparse-switch
+
+    :sswitch_data_1
+    .sparse-switch
+        -0x21817e33 -> :sswitch_9
+        0xc5ba715 -> :sswitch_c
+        0x5f0eec64 -> :sswitch_8
+        0x6f10aca7 -> :sswitch_7
+    .end sparse-switch
+.end method
+
+.method private static o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/io/File;)V
+    .locals 7
+
+    const/4 v2, 0x0
+
+    new-instance v3, Ljava/io/File;
+
+    const-string v0, "KAoLHBsFDSYECwgSDBcbQAwBBQ=="
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v3, p0, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    :try_start_0
+    new-instance v1, Ljava/io/FileInputStream;
+
+    invoke-direct {v1, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_3
+
+    :try_start_1
+    invoke-static {v1}, Lexp/aob;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/io/InputStream;)[B
+
+    move-result-object v4
+
+    invoke-static {v1}, Lme/weishu/exp/util/IOUtils;->closeSilently(Ljava/io/Closeable;)V
+
+    const v5, -0x7857f14e
+
+    const-string v0, "\u06df\u06e2\u06e1\u06d8\u06e1\u06d6\u06d8\u06d8\u06df\u06d6\u06e0\u06e7\u06e0\u06e8\u06d8\u06e0\u06e5\u06e7\u06eb\u06da\u06d8\u06d8\u06e0\u06df\u06e6\u06d8\u06e4\u06d8\u06da"
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v6
+
+    xor-int/2addr v6, v5
+
+    sparse-switch v6, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    if-eqz v4, :cond_0
+
+    const-string v0, "\u06eb\u06e1\u06d8\u06d8\u06e7\u06e8\u06da\u06d6\u06e2\u06e5\u06d8\u06df\u06e6\u06e7\u06d8\u06e2\u06e5\u06dc\u06d8\u06e7\u06ec\u06d8\u06d8"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "\u06db\u06ec\u06ec\u06e5\u06e2\u06e6\u06d8\u06e6\u06e1\u06e1\u06d7\u06e6\u06e1\u06d8\u06d8\u06e4\u06e5\u06e8\u06e1\u06da\u06e6\u06e4\u06e5\u06d8\u06da\u06e6\u06d8\u06d8"
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "\u06dc\u06d7\u06db\u06df\u06e1\u06e6\u06d8\u06e8\u06e8\u06d8\u06d8\u06eb\u06e2\u06eb\u06e7\u06db\u06ec\u06e7\u06ec\u06df\u06d9\u06d8\u06d8"
+
+    goto :goto_0
+
+    :sswitch_2
+    :try_start_2
+    new-instance v1, Ljava/io/FileOutputStream;
+
+    invoke-direct {v1, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_4
+
+    :try_start_3
+    invoke-virtual {v1, v4}, Ljava/io/FileOutputStream;->write([B)V
+
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->flush()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    invoke-static {v1}, Lme/weishu/exp/util/IOUtils;->closeSilently(Ljava/io/Closeable;)V
+
+    :sswitch_3
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    move-object v1, v2
+
+    :goto_1
+    :try_start_4
+    new-instance v2, Lme/weishu/exp/core/CreateFailedException;
+
+    const-string v3, "BEQKThpMBUsD"
+
+    invoke-static {v3}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3, v0}, Lme/weishu/exp/core/CreateFailedException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    move-object v2, v1
+
+    :goto_2
+    invoke-static {v2}, Lme/weishu/exp/util/IOUtils;->closeSilently(Ljava/io/Closeable;)V
+
+    throw v0
+
+    :catch_1
+    move-exception v0
+
+    move-object v2, v1
+
+    :goto_3
+    :try_start_5
+    new-instance v1, Lme/weishu/exp/core/CreateFailedException;
+
+    const-string v3, "BEQKThpMBUsDRVA="
+
+    invoke-static {v3}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v1, v3, v0}, Lme/weishu/exp/core/CreateFailedException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    :catchall_1
+    move-exception v0
+
+    :goto_4
+    invoke-static {v2}, Lme/weishu/exp/util/IOUtils;->closeSilently(Ljava/io/Closeable;)V
+
+    throw v0
+
+    :catchall_2
+    move-exception v0
+
+    move-object v2, v1
+
+    goto :goto_4
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_3
+
+    :catchall_3
+    move-exception v0
+
+    goto :goto_4
+
+    :catchall_4
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_1
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x50de4f7b -> :sswitch_2
+        -0x25dcefab -> :sswitch_0
+        0xc7652cc -> :sswitch_1
+        0x11510c35 -> :sswitch_3
+    .end sparse-switch
+.end method
+
+.method private static o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/io/File;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 6
+
+    const-string v0, "CBYCWEBBH1ME"
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, p1, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v3, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v3, Ljava/io/File;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v3, p0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    new-instance v2, Ljava/io/File;
+
+    invoke-direct {v2, p1, p3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v5, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v5, Ljava/io/File;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v5, p0, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    :try_start_0
+    invoke-static {v3, v0}, Lme/weishu/exp/util/IOUtils;->copyFile(Ljava/io/File;Ljava/io/File;)V
+
+    invoke-static {v5, v2}, Lme/weishu/exp/util/IOUtils;->copyFile(Ljava/io/File;Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    sget-object v2, Lme/weishu/exp/core/Creator;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "CgsfF1QAAAlFAw4GSQUdDRxW"
+
+    invoke-static {v4}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "DBYdAQY="
+
+    invoke-static {v1}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+.end method
+
+.method private static o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Lme/weishu/exp/persistence/ExpApp;Ljava/lang/String;Landroid/content/Context;)V
+    .locals 6
+
+    invoke-virtual {p0}, Lme/weishu/exp/persistence/ExpApp;->getVersionCode()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Lme/weishu/exp/persistence/ExpApp;->isExpApp()Z
+
+    move-result v3
+
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lme/weishu/exp/persistence/ExpApp;->setBackupName(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lme/weishu/exp/persistence/ExpApp;->getPackageName()Ljava/lang/String;
+
+    move-result-object v4
+
+    const/16 v5, 0x40
+
+    invoke-virtual {v1, v4, v5}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v0
+
+    const v4, -0x34619c0d    # -2.076055E7f
+
+    const-string v1, "\u06d6\u06e6\u06eb\u06d6\u06e0\u06db\u06da\u06d6\u06ec\u06e8\u06e2\u06d6\u06da\u06ec\u06ec\u06e7\u06e7\u06db\u06e8\u06d6\u06d6"
+
+    :goto_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v5
+
+    xor-int/2addr v5, v4
+
+    sparse-switch v5, :sswitch_data_0
+
+    goto :goto_0
+
+    :goto_1
+    :sswitch_0
+    const v4, -0x641dafda
+
+    const-string v1, "\u06eb\u06dc\u06d6\u06d8\u06e7\u06da\u06da\u06e7\u06e2\u06e2\u06e2\u06e2\u06e5\u06d8\u06d7\u06e0\u06df\u06eb\u06e6\u06d8\u06e1\u06e0\u06d6"
+
+    :goto_2
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v5
+
+    xor-int/2addr v5, v4
+
+    sparse-switch v5, :sswitch_data_1
+
+    goto :goto_2
+
+    :sswitch_1
+    const v4, -0x5f426f19
+
+    const-string v1, "\u06ec\u06db\u06d9\u06ec\u06e1\u06e5\u06d8\u06e2\u06d9\u06eb\u06d9\u06e7\u06e1\u06d7\u06e5\u06da\u06df\u06df\u06d8\u06e6\u06d8\u06e6\u06eb\u06da\u06e8\u06d8\u06d6\u06e2\u06e5\u06d8"
+
+    :goto_3
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v5
+
+    xor-int/2addr v5, v4
+
+    sparse-switch v5, :sswitch_data_2
+
+    goto :goto_3
+
+    :sswitch_2
+    iget-object v1, v0, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {p2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v1, v5}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    const-string v1, "\u06db\u06d8\u06d9\u06d6\u06e2\u06e5\u06db\u06d8\u06e8\u06d8\u06e8\u06e0\u06d6\u06d6\u06e4\u06e4\u06e6\u06e5\u06d9\u06d9\u06d7\u06db\u06ec\u06db\u06e7"
+
+    goto :goto_3
+
+    :cond_0
+    :try_start_1
+    const-string v1, "\u06dc\u06db\u06e7\u06eb\u06e0\u06e5\u06d8\u06e6\u06da\u06e1\u06d8\u06d6\u06df\u06e7\u06ec\u06ec\u06e5\u06da"
+
+    goto :goto_0
+
+    :sswitch_3
+    if-eqz v0, :cond_0
+
+    const-string v1, "\u06db\u06eb\u06dc\u06d6\u06d7\u06d8\u06eb\u06e1\u06da\u06db\u06df\u06e0\u06df\u06ec\u06e0\u06df\u06e4\u06e4"
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v1, "\u06df\u06eb\u06e6\u06d8\u06db\u06d8\u06d6\u06d8\u06d6\u06d8\u06d7\u06d8\u06da\u06e1\u06d8\u06d9\u06e8\u06dc\u06d8\u06eb\u06d8\u06e5\u06db\u06e6\u06e5\u06d8\u06d6\u06e6"
+
+    goto :goto_0
+
+    :sswitch_5
+    :try_start_2
+    iget-object v1, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Landroid/content/pm/ApplicationInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Lme/weishu/exp/persistence/ExpApp;->setDisplayName(Ljava/lang/String;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
+
+    goto :goto_1
+
+    :cond_1
+    const-string v1, "\u06e5\u06e1\u06d6\u06d8\u06e6\u06e2\u06eb\u06db\u06d7\u06d6\u06d8\u06e2\u06df\u06e6\u06d9\u06df\u06dc\u06d8\u06db\u06d8\u06da\u06e7\u06eb\u06e6\u06d8"
+
+    goto :goto_2
+
+    :sswitch_6
+    if-eqz v0, :cond_1
+
+    const-string v1, "\u06e5\u06ec\u06df\u06db\u06df\u06e1\u06df\u06e5\u06e6\u06d8\u06ec\u06e6\u06dc\u06d8\u06d9\u06e1\u06e8\u06d8\u06dc\u06dc\u06dc\u06d8\u06d8\u06d7\u06e5"
+
+    goto :goto_2
+
+    :sswitch_7
+    const-string v1, "\u06d7\u06e5\u06e1\u06e7\u06e8\u06ec\u06d8\u06db\u06d7\u06e8\u06d7\u06dc\u06e6\u06ec\u06e8\u06d9\u06e5\u06dc\u06e8\u06e7\u06e8\u06d8\u06d8"
+
+    goto :goto_2
+
+    :cond_2
+    const-string v1, "\u06e2\u06e2\u06e1\u06d8\u06d8\u06d7\u06d9\u06ec\u06d6\u06ec\u06e2\u06eb\u06e2\u06e8\u06e2\u06da"
+
+    goto :goto_3
+
+    :sswitch_8
+    const-string v1, "\u06da\u06e2\u06d6\u06d8\u06e6\u06e4\u06e8\u06db\u06e4\u06dc\u06d8\u06d9\u06ec\u06d8\u06d8\u06e4\u06dc\u06d6\u06e0\u06e5\u06d8\u06d6\u06d6\u06e2\u06e1\u06e5\u06eb"
+
+    goto :goto_3
+
+    :sswitch_9
+    new-instance v0, Lme/weishu/exp/core/CreateFailedException;
+
+    const-string v1, "LQtPABsYSRgQFREbGxBPGhwFGksEFRFa"
+
+    invoke-static {v1}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lme/weishu/exp/core/CreateFailedException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :sswitch_a
+    const v4, -0x6a3859c4
+
+    const-string v1, "\u06e6\u06d7\u06e4\u06ec\u06e5\u06d6\u06d9\u06d7\u06e4\u06e1\u06d7\u06e1\u06d8\u06eb\u06d6\u06df\u06d9\u06e7\u06e1\u06d8\u06e7\u06e2\u06e7\u06db\u06e6\u06dc\u06e8\u06e1\u06e8\u06d8"
+
+    :goto_4
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v5
+
+    xor-int/2addr v5, v4
+
+    sparse-switch v5, :sswitch_data_3
+
+    goto :goto_4
+
+    :sswitch_b
+    const v2, -0x57e487a3
+
+    const-string v1, "\u06dc\u06e2\u06e4\u06e7\u06e8\u06e0\u06e7\u06e4\u06e1\u06da\u06d9\u06eb\u06e6\u06e5\u06d6\u06ec\u06d8\u06ec\u06e6\u06e6"
+
+    :goto_5
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    xor-int/2addr v3, v2
+
+    sparse-switch v3, :sswitch_data_4
+
+    goto :goto_5
+
+    :sswitch_c
+    sget-object v0, Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;->O0oo0oO00o00oo0o0000o00o000o00o00o00oO:Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;
+
+    invoke-virtual {p0, v0}, Lme/weishu/exp/persistence/ExpApp;->setStatus(Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;)V
+
+    :goto_6
+    new-instance v1, Ljava/io/File;
+
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    const v2, 0x56aa8f5b
+
+    const-string v0, "\u06d6\u06e1\u06ec\u06e7\u06e7\u06d9\u06df\u06d7\u06e6\u06d8\u06e7\u06eb\u06e6\u06d8\u06da\u06eb\u06e1\u06d8\u06ec\u06d6\u06d8\u06e2\u06d6\u06e7"
+
+    :goto_7
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    xor-int/2addr v3, v2
+
+    sparse-switch v3, :sswitch_data_5
+
+    goto :goto_7
+
+    :sswitch_d
+    const-string v0, "\u06df\u06d8\u06e6\u06d8\u06e0\u06eb\u06d9\u06e7\u06e5\u06da\u06d7\u06e8\u06db\u06e0\u06e6\u06e2"
+
+    goto :goto_7
+
+    :cond_3
+    const-string v1, "\u06da\u06d6\u06ec\u06e5\u06ec\u06d6\u06d8\u06e0\u06e2\u06e6\u06e2\u06d7\u06d6\u06d8\u06df\u06db\u06e6\u06d8\u06db\u06d6\u06e2"
+
+    goto :goto_4
+
+    :sswitch_e
+    if-eqz v3, :cond_3
+
+    const-string v1, "\u06db\u06db\u06dc\u06d8\u06e8\u06e5\u06e6\u06e1\u06e1\u06e6\u06d8\u06d7\u06d8\u06d8\u06d9\u06e5\u06e7\u06d8"
+
+    goto :goto_4
+
+    :sswitch_f
+    const-string v1, "\u06d7\u06d8\u06e7\u06e8\u06e7\u06e1\u06d6\u06e2\u06d8\u06d6\u06db\u06dc\u06d9\u06da\u06eb\u06db\u06e1\u06e1\u06d8\u06d6\u06e7\u06d8\u06d9\u06da\u06df\u06e5\u06e7\u06dc"
+
+    goto :goto_4
+
+    :sswitch_10
+    const v3, 0x334494cf
+
+    const-string v1, "\u06d9\u06e6\u06eb\u06d7\u06d6\u06dc\u06d8\u06e4\u06d6\u06ec\u06e6\u06e0\u06e2\u06e4\u06df\u06e6\u06d8"
+
+    :goto_8
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v4
+
+    xor-int/2addr v4, v3
+
+    sparse-switch v4, :sswitch_data_6
+
+    goto :goto_8
+
+    :sswitch_11
+    iget v0, v0, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    int-to-long v0, v0
+
+    int-to-long v2, v2
+
+    cmp-long v1, v0, v2
+
+    const v2, -0x5325d4d1
+
+    const-string v0, "\u06db\u06e0\u06d8\u06d8\u06dc\u06e1\u06d6\u06d8\u06e5\u06d8\u06ec\u06da\u06df\u06d6\u06d8\u06d9\u06d7\u06e0\u06e4\u06dc\u06d8\u06e5\u06dc\u06d7\u06e5\u06eb\u06dc\u06e5\u06e5\u06db"
+
+    :goto_9
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    xor-int/2addr v3, v2
+
+    sparse-switch v3, :sswitch_data_7
+
+    goto :goto_9
+
+    :sswitch_12
+    if-lez v1, :cond_5
+
+    const-string v0, "\u06e5\u06ec\u06ec\u06db\u06d6\u06db\u06d8\u06ec\u06eb\u06eb\u06eb\u06d8\u06d8\u06d6\u06e5\u06dc\u06d6\u06e6\u06dc\u06e2"
+
+    goto :goto_9
+
+    :cond_4
+    const-string v1, "\u06eb\u06d9\u06e1\u06d8\u06e8\u06d6\u06da\u06e8\u06e4\u06da\u06e6\u06e4\u06ec\u06d9\u06df\u06d8\u06d8"
+
+    goto :goto_8
+
+    :sswitch_13
+    if-nez v0, :cond_4
+
+    const-string v1, "\u06e1\u06db\u06dc\u06d8\u06df\u06da\u06d8\u06e5\u06e2\u06e8\u06d9\u06db\u06e7\u06dc\u06e6\u06d8\u06d8\u06db\u06ec\u06e1\u06d8\u06eb\u06dc\u06e5"
+
+    goto :goto_8
+
+    :sswitch_14
+    const-string v1, "\u06e2\u06ec\u06d6\u06d6\u06db\u06e6\u06e1\u06e5\u06d7\u06e0\u06dc\u06e7\u06dc\u06e7\u06d8\u06e6\u06db\u06d8\u06d6\u06e0\u06e1\u06e6\u06eb\u06e7"
+
+    goto :goto_8
+
+    :sswitch_15
+    sget-object v0, Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;->O0oo0oO00o00oo0o0000o00o000o00o00o00oO:Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;
+
+    invoke-virtual {p0, v0}, Lme/weishu/exp/persistence/ExpApp;->setStatus(Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;)V
+
+    goto :goto_6
+
+    :cond_5
+    const-string v0, "\u06e8\u06e5\u06d7\u06e5\u06dc\u06dc\u06d8\u06ec\u06d6\u06ec\u06e1\u06e5\u06df\u06e2\u06df\u06da\u06e0\u06db\u06e5\u06d8\u06e8\u06dc\u06d8"
+
+    goto :goto_9
+
+    :sswitch_16
+    const-string v0, "\u06d9\u06d9\u06e8\u06d8\u06e7\u06d7\u06d6\u06d8\u06db\u06e4\u06e8\u06d8\u06e2\u06e8\u06dc\u06e6\u06d8"
+
+    goto :goto_9
+
+    :sswitch_17
+    sget-object v0, Lme/weishu/exp/core/Creator;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo:Ljava/lang/String;
+
+    const-string v1, "HRYWThADHgUCFwAQDEQCDw1MDwoMCU9a"
+
+    invoke-static {v1}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-object v0, Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;->O0oo0oO00o00oo0o0000o00o000o00o00o00oO:Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;
+
+    invoke-virtual {p0, v0}, Lme/weishu/exp/persistence/ExpApp;->setStatus(Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;)V
+
+    goto :goto_6
+
+    :sswitch_18
+    const v2, -0x56dbca6c
+
+    const-string v0, "\u06e8\u06e0\u06e6\u06d8\u06ec\u06d9\u06e4\u06e0\u06d6\u06d7\u06df\u06da\u06d7\u06ec\u06eb\u06d7\u06df\u06e8\u06e5\u06d8\u06db\u06e4\u06dc\u06d8\u06e0\u06da\u06d6\u06d8\u06df\u06d9\u06e1"
+
+    :goto_a
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    xor-int/2addr v3, v2
+
+    sparse-switch v3, :sswitch_data_8
+
+    goto :goto_a
+
+    :sswitch_19
+    if-nez v1, :cond_6
+
+    const-string v0, "\u06db\u06d7\u06da\u06d6\u06e8\u06e7\u06dc\u06ec\u06ec\u06db\u06d7\u06ec\u06d8\u06d6\u06e6\u06e5\u06e0\u06ec"
+
+    goto :goto_a
+
+    :cond_6
+    const-string v0, "\u06d9\u06d8\u06d6\u06d8\u06e8\u06dc\u06e4\u06e1\u06e6\u06e7\u06ec\u06e7\u06d6\u06d8\u06d7\u06e4\u06da\u06e8\u06dc\u06e6\u06e0\u06e5\u06dc\u06df\u06e6\u06da"
+
+    goto :goto_a
+
+    :sswitch_1a
+    const-string v0, "\u06dc\u06d8\u06d6\u06d6\u06db\u06d6\u06d8\u06eb\u06e1\u06d8\u06e4\u06df\u06e8\u06d6\u06da\u06dc\u06d8\u06e5\u06e7\u06da\u06db\u06da\u06e0\u06e8\u06e6\u06d8\u06df\u06d9"
+
+    goto :goto_a
+
+    :sswitch_1b
+    sget-object v0, Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;->o00oo00o0ooo0ooO0O0Oo0oo0oOo0o0O0o00oo:Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;
+
+    invoke-virtual {p0, v0}, Lme/weishu/exp/persistence/ExpApp;->setStatus(Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;)V
+
+    goto/16 :goto_6
+
+    :sswitch_1c
+    sget-object v0, Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;->oo0o0O0o0ooOO0oOo0O0oo0oo00o00o00o0o00:Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;
+
+    invoke-virtual {p0, v0}, Lme/weishu/exp/persistence/ExpApp;->setStatus(Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;)V
+
+    goto/16 :goto_6
+
+    :cond_7
+    const-string v1, "\u06e1\u06e5\u06e4\u06e7\u06d7\u06e5\u06d8\u06e6\u06d7\u06e2\u06df\u06e0\u06ec\u06e5\u06d7\u06e2"
+
+    goto/16 :goto_5
+
+    :sswitch_1d
+    if-nez v0, :cond_7
+
+    const-string v1, "\u06e2\u06e0\u06e6\u06d9\u06e8\u06e1\u06d8\u06e7\u06e0\u06ec\u06e2\u06db\u06d8\u06e6\u06e8\u06dc\u06e6\u06eb\u06e8\u06eb\u06e5\u06e7\u06d8\u06e4\u06dc\u06e8\u06d8"
+
+    goto/16 :goto_5
+
+    :sswitch_1e
+    const-string v1, "\u06e2\u06eb\u06da\u06e6\u06e6\u06d9\u06d7\u06e4\u06eb\u06d7\u06e5\u06e8\u06d8\u06da\u06d7\u06eb"
+
+    goto/16 :goto_5
+
+    :sswitch_1f
+    const v2, -0xb68ef7e
+
+    const-string v1, "\u06ec\u06dc\u06d8\u06d8\u06e6\u06db\u06e1\u06d8\u06e7\u06dc\u06da\u06d7\u06e2\u06e2\u06dc\u06e5\u06e7\u06d8\u06eb\u06eb\u06dc\u06da\u06eb\u06e7\u06e7\u06db\u06e5"
+
+    :goto_b
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    xor-int/2addr v3, v2
+
+    sparse-switch v3, :sswitch_data_9
+
+    goto :goto_b
+
+    :sswitch_20
+    sget-object v0, Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;->OO000o0000o0o0oo0ooo0oO0o0o0oO0o0OoOO0:Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;
+
+    invoke-virtual {p0, v0}, Lme/weishu/exp/persistence/ExpApp;->setStatus(Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;)V
+
+    goto/16 :goto_6
+
+    :cond_8
+    const-string v1, "\u06e8\u06d8\u06e1\u06d8\u06d7\u06e6\u06d8\u06eb\u06df\u06e0\u06df\u06eb\u06db\u06e7\u06d8\u06d8\u06e4\u06ec\u06dc\u06da\u06da"
+
+    goto :goto_b
+
+    :sswitch_21
+    invoke-static {v0}, Lme/weishu/exp/core/Engine;->isExpApp(Landroid/content/pm/PackageInfo;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    const-string v1, "\u06e7\u06e8\u06d6\u06d6\u06d9\u06d8\u06dc\u06e6\u06d8\u06ec\u06e6\u06e7\u06e2\u06eb\u06e7\u06d8\u06e8"
+
+    goto :goto_b
+
+    :sswitch_22
+    const-string v1, "\u06db\u06d8\u06e8\u06d8\u06e4\u06db\u06d6\u06dc\u06e4\u06d6\u06df\u06d8\u06e6\u06d8\u06e5\u06e4\u06df"
+
+    goto :goto_b
+
+    :sswitch_23
+    sget-object v0, Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;->O0oo0oO00o00oo0o0000o00o000o00o00o00oO:Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;
+
+    invoke-virtual {p0, v0}, Lme/weishu/exp/persistence/ExpApp;->setStatus(Lme/weishu/exp/persistence/ExpApp$o0o0000o0o000oooOO0o0o00o000oo0ooo00oo;)V
+
+    goto/16 :goto_6
+
+    :cond_9
+    const-string v0, "\u06e7\u06e6\u06dc\u06eb\u06e6\u06da\u06e0\u06dc\u06d8\u06dc\u06e8\u06da\u06e7\u06eb\u06dc\u06dc\u06e0\u06e6"
+
+    goto/16 :goto_7
+
+    :sswitch_24
+    invoke-virtual {v1}, Ljava/io/File;->canWrite()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    const-string v0, "\u06d8\u06db\u06e6\u06da\u06e4\u06d9\u06e8\u06d6\u06e8\u06d8\u06e8\u06e1\u06d7\u06e0\u06df\u06d7\u06d8\u06e5\u06dc\u06d8\u06e1\u06e6\u06dc\u06df\u06e5\u06e4\u06d7\u06e8"
+
+    goto/16 :goto_7
+
+    :sswitch_25
+    invoke-virtual {v1}, Ljava/io/File;->delete()Z
+
+    :sswitch_26
+    return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7e12b835 -> :sswitch_0
+        -0xc7a37aa -> :sswitch_3
+        0x40d263dc -> :sswitch_4
+        0x622a9979 -> :sswitch_5
+    .end sparse-switch
+
+    :sswitch_data_1
+    .sparse-switch
+        -0x50a99b0f -> :sswitch_a
+        -0x70ad0b4 -> :sswitch_6
+        0x304b82cc -> :sswitch_1
+        0x77e629f9 -> :sswitch_7
+    .end sparse-switch
+
+    :sswitch_data_2
+    .sparse-switch
+        -0x1478fc2c -> :sswitch_8
+        -0x65a4eae -> :sswitch_2
+        0x33801a55 -> :sswitch_a
+        0x3c3eff81 -> :sswitch_9
+    .end sparse-switch
+
+    :sswitch_data_3
+    .sparse-switch
+        -0x48b4edb5 -> :sswitch_b
+        -0x1cca7cf7 -> :sswitch_f
+        0x1b73f2c2 -> :sswitch_e
+        0x5ac4047f -> :sswitch_10
+    .end sparse-switch
+
+    :sswitch_data_4
+    .sparse-switch
+        -0x37192bf5 -> :sswitch_1e
+        -0x3000f472 -> :sswitch_1f
+        0x1509d74f -> :sswitch_1d
+        0x49b815c7 -> :sswitch_c
+    .end sparse-switch
+
+    :sswitch_data_5
+    .sparse-switch
+        -0x5f3f5aa2 -> :sswitch_d
+        -0x25dcbc1b -> :sswitch_26
+        0x4708debe -> :sswitch_24
+        0x751ea430 -> :sswitch_25
+    .end sparse-switch
+
+    :sswitch_data_6
+    .sparse-switch
+        0xb0663ce -> :sswitch_14
+        0x2552bb92 -> :sswitch_11
+        0x2b45ab5b -> :sswitch_13
+        0x54f397c1 -> :sswitch_15
+    .end sparse-switch
+
+    :sswitch_data_7
+    .sparse-switch
+        -0x1e2919a4 -> :sswitch_12
+        0xbe04690 -> :sswitch_18
+        0x21836982 -> :sswitch_17
+        0x226aea28 -> :sswitch_16
+    .end sparse-switch
+
+    :sswitch_data_8
+    .sparse-switch
+        -0x79fbbab2 -> :sswitch_19
+        -0x6ee8aa55 -> :sswitch_1b
+        0x1af9bac5 -> :sswitch_1c
+        0x6b5fd7c0 -> :sswitch_1a
+    .end sparse-switch
+
+    :sswitch_data_9
+    .sparse-switch
+        -0x2b9f3073 -> :sswitch_22
+        -0x16c61105 -> :sswitch_23
+        -0x14c3c093 -> :sswitch_21
+        0x1518db10 -> :sswitch_20
+    .end sparse-switch
+.end method
+
+.method private static synthetic o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/io/File;Ljava/lang/String;)Z
+    .locals 7
+
+    const/4 v2, 0x0
+
+    const-string v0, "\u06e1\u06d6\u06dc\u06d8\u06df\u06d8\u06d6\u06e2\u06dc\u06db\u06da\u06da\u06dc\u06df\u06d7\u06df"
+
+    move v1, v2
+
+    move v3, v2
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v4
+
+    const/16 v5, 0x11
+
+    const v6, 0x47c42e75
+
+    xor-int/2addr v4, v5
+
+    xor-int/2addr v4, v6
+
+    sparse-switch v4, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "\u06e7\u06e5\u06e1\u06e2\u06df\u06e4\u06e1\u06da\u06db\u06da\u06dc\u06d7\u06e0\u06d9\u06e4"
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "\u06e0\u06dc\u06e6\u06e1\u06e6\u06da\u06e7\u06d8\u06e5\u06d8\u06db\u06db\u06da\u06db\u06e7\u06e8\u06d8"
+
+    goto :goto_0
+
+    :sswitch_2
+    const v4, -0x6a9a0b91
+
+    const-string v0, "\u06df\u06d9\u06d9\u06e1\u06da\u06ec\u06eb\u06dc\u06dc\u06e6\u06d9\u06e7\u06d7\u06e5\u06d8\u06d8\u06db\u06e6\u06d7"
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v5
+
+    xor-int/2addr v5, v4
+
+    sparse-switch v5, :sswitch_data_1
+
+    goto :goto_1
+
+    :sswitch_3
+    const-string v0, "\u06d6\u06d7\u06e5\u06d8\u06e7\u06e2\u06d9\u06db\u06e6\u06e7\u06d8\u06e1\u06e0\u06e5\u06e0\u06df\u06df\u06db\u06e4\u06e7"
+
+    goto :goto_1
+
+    :cond_0
+    const-string v0, "\u06db\u06eb\u06e1\u06d8\u06e6\u06d7\u06e1\u06d8\u06d9\u06dc\u06e5\u06d9\u06e6\u06e7\u06d8\u06e0\u06e4\u06e5\u06d8\u06d9\u06e5\u06e0"
+
+    goto :goto_1
+
+    :sswitch_4
+    const-string v0, "CBYCWEBBH1ME"
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "\u06dc\u06d8\u06e0\u06e5\u06df\u06e5\u06eb\u06d7\u06e1\u06dc\u06e8\u06d8\u06e4\u06df\u06e8\u06e5\u06ec\u06df\u06df\u06dc\u06e2\u06d7\u06db\u06e8\u06db\u06db"
+
+    goto :goto_1
+
+    :sswitch_5
+    const-string v0, "\u06dc\u06d7\u06e5\u06d8\u06d7\u06e1\u06d7\u06e4\u06e0\u06dc\u06db\u06e5\u06e4\u06e0\u06dc\u06d8\u06db\u06d8\u06ec\u06d7\u06df\u06d9\u06dc\u06d8\u06e1\u06dc\u06e6"
+
+    goto :goto_0
+
+    :sswitch_6
+    const v4, -0x4cf13e84
+
+    const-string v0, "\u06d8\u06db\u06d6\u06d8\u06dc\u06e6\u06d6\u06d8\u06df\u06d7\u06e1\u06e4\u06d8\u06e8\u06e5\u06e7\u06db\u06e7\u06d9\u06e2\u06e6\u06d6\u06d8\u06dc\u06d9\u06dc\u06df\u06eb\u06eb"
+
+    :goto_2
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v5
+
+    xor-int/2addr v5, v4
+
+    sparse-switch v5, :sswitch_data_2
+
+    goto :goto_2
+
+    :sswitch_7
+    const-string v0, "\u06da\u06e5\u06dc\u06df\u06e4\u06e1\u06e7\u06e8\u06dc\u06d8\u06dc\u06d7\u06e1\u06d8\u06ec\u06d8\u06e2\u06d7\u06e7\u06d6\u06d8"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v0, "\u06d8\u06dc\u06eb\u06dc\u06da\u06d9\u06d8\u06e8\u06e7\u06d8\u06e8\u06d8\u06e1\u06e7\u06db\u06e1\u06e1\u06df\u06e8\u06d8\u06e1\u06e0\u06e8\u06d8\u06e5\u06e6\u06e4\u06e0\u06eb"
+
+    goto :goto_2
+
+    :sswitch_8
+    const-string v0, "EVxZMUJY"
+
+    invoke-static {v0}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "\u06db\u06e8\u06e1\u06d8\u06d6\u06e5\u06db\u06e2\u06eb\u06d9\u06da\u06da\u06dc\u06d8\u06e8\u06d8\u06d6\u06ec\u06e1\u06e8\u06d8\u06d8\u06db\u06ec\u06dc\u06e2\u06d7\u06e6\u06e7\u06e1\u06d8"
+
+    goto :goto_2
+
+    :sswitch_9
+    const-string v0, "\u06eb\u06e0\u06d6\u06d8\u06e0\u06e4\u06da\u06e8\u06da\u06e7\u06d9\u06e0\u06eb\u06e6\u06e2\u06d6\u06e6\u06da\u06e2\u06dc\u06e1\u06d8\u06e5\u06e1\u06d8"
+
+    goto :goto_2
+
+    :sswitch_a
+    const-string v0, "\u06dc\u06ec\u06d8\u06d8\u06e1\u06e0\u06e5\u06d8\u06da\u06e5\u06e0\u06d9\u06e4\u06e7\u06db\u06e0\u06dc\u06d8\u06df\u06e8\u06dc"
+
+    goto :goto_0
+
+    :sswitch_b
+    const/4 v3, 0x1
+
+    const-string v0, "\u06db\u06eb\u06e6\u06d7\u06e6\u06e6\u06d8\u06e4\u06e2\u06e5\u06d8\u06e2\u06da\u06d7\u06e2\u06d7\u06da\u06e4\u06e0"
+
+    goto :goto_0
+
+    :sswitch_c
+    const-string v0, "\u06ec\u06d6\u06e7\u06d8\u06d8\u06dc\u06e2\u06e5\u06d7\u06dc\u06df\u06db\u06dc\u06e4\u06d9\u06dc\u06e8\u06d7\u06da\u06d6\u06df\u06e2\u06dc\u06e7\u06e5\u06e1\u06d8"
+
+    move v1, v3
+
+    goto :goto_0
+
+    :sswitch_d
+    const-string v0, "\u06e5\u06db\u06e1\u06d8\u06e1\u06e0\u06e5\u06d8\u06e5\u06db\u06e0\u06d9\u06e0\u06e7\u06dc\u06d6\u06e7\u06d8\u06d8\u06d8\u06e6\u06e2\u06dc\u06e1\u06d8\u06ec\u06e2\u06ec"
+
+    goto :goto_0
+
+    :sswitch_e
+    const-string v0, "\u06e1\u06d6\u06e1\u06d8\u06dc\u06d8\u06eb\u06df\u06e5\u06dc\u06d8\u06e0\u06d7\u06e1\u06e1\u06eb\u06e4\u06e8\u06db\u06d6\u06e4\u06e6\u06d8\u06d8\u06eb\u06d6\u06e2"
+
+    move v1, v2
+
+    goto :goto_0
+
+    :sswitch_f
+    const-string v0, "\u06e1\u06d6\u06e1\u06d8\u06dc\u06d8\u06eb\u06df\u06e5\u06dc\u06d8\u06e0\u06d7\u06e1\u06e1\u06eb\u06e4\u06e8\u06db\u06d6\u06e4\u06e6\u06d8\u06d8\u06eb\u06d6\u06e2"
+
+    goto :goto_0
+
+    :sswitch_10
+    return v1
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x6e136285 -> :sswitch_e
+        -0x67dcc90f -> :sswitch_f
+        -0x66639e7d -> :sswitch_10
+        -0x63d5bcd0 -> :sswitch_1
+        -0x489b913d -> :sswitch_2
+        -0x21e72133 -> :sswitch_b
+        -0x1750c732 -> :sswitch_c
+        0x11f018a -> :sswitch_d
+        0x496bba4e -> :sswitch_6
+        0x5c2b0f04 -> :sswitch_0
+    .end sparse-switch
+
+    :sswitch_data_1
+    .sparse-switch
+        -0x5baab3ef -> :sswitch_5
+        -0x32039d19 -> :sswitch_3
+        -0x25af473d -> :sswitch_7
+        0x74529bce -> :sswitch_4
+    .end sparse-switch
+
+    :sswitch_data_2
+    .sparse-switch
+        0x21e45297 -> :sswitch_a
+        0x3b33945c -> :sswitch_7
+        0x4c7a473b -> :sswitch_9
+        0x6d7693e9 -> :sswitch_8
+    .end sparse-switch
+.end method
+
+.method public static native p(Ljava/lang/Object;)Z
+.end method
+
+.method public static native q(Ljava/lang/Object;)Ljava/lang/String;
+.end method
+
+.method public static native r(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.end method
+
+.method public static s()Ljava/lang/String;
+    .locals 1
+    # kkkzheli: returns "太极" for correct mode detection
+    const-string v0, "太极"
+    return-object v0
+.end method
+
+.method public static writeFile(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)V
+    .locals 4
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    new-instance v1, Ljava/io/FileWriter;
+
+    invoke-direct {v1, p2}, Ljava/io/FileWriter;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    invoke-static {p1, p0}, Lme/weishu/exposed/Encrypt;->encrypt(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    invoke-static {v1}, Lme/weishu/exp/util/IOUtils;->closeSilently(Ljava/io/Closeable;)V
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    move-object v1, v2
+
+    :goto_0
+    :try_start_2
+    new-instance v2, Lme/weishu/exp/core/CreateFailedException;
+
+    const-string v3, "HhYGGhFMCBsVCQgXCBAGARpMDwoMCQQQ"
+
+    invoke-static {v3}, Lexp/any;->o0o0000o0o000oooOO0o0o00o000oo0ooo00oo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3, v0}, Lme/weishu/exp/core/CreateFailedException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    :goto_1
+    invoke-static {v1}, Lme/weishu/exp/util/IOUtils;->closeSilently(Ljava/io/Closeable;)V
+
+    throw v0
+
+    :catchall_1
+    move-exception v0
+
+    move-object v1, v2
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_1
+.end method
