@@ -2805,7 +2805,7 @@
 .end method
 
 .method public static s(Z)Ljava/util/Map;
-    .locals 1
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z)",
@@ -2816,7 +2816,73 @@
             ">;>;"
         }
     .end annotation
-    # kkkzheli: bypass
+
+    # kkkzheli: query XposedModule from DatabaseHelper instead of native JNI
+    new-instance v0, Ljava/util/HashMap;
+
+    :try_start
+    # Get application context - use MainApplication.getAppContext() instead of field
+    invoke-static {}, Lme/weishu/exp/MainApplication;->getAppContext()Landroid/content/Context;
+    move-result-object v4
+    if-nez v4, :goto_return
+
+    # Create DatabaseHelper
+    new-instance v5, Lme/weishu/exp/persistence/DatabaseHelper;
+    invoke-direct {v5, v4}, Lme/weishu/exp/persistence/DatabaseHelper;-><init>(Landroid/content/Context;)V
+
+    # Get XposedModule DAO
+    invoke-virtual {v5}, Lme/weishu/exp/persistence/DatabaseHelper;->getXposedModuleDao()Lexp/aok;
+
+    move-result-object v6
+
+    # Query all modules - use O0oo0oO00o00oo0o0000o00o000o00o00o00oO() method
+    invoke-virtual {v6}, Lexp/aok;->O0oo0oO00o00oo0o0000o00o000o00o00o00oO()Ljava/util/List;
+
+    move-result-object v7
+
+    # Build map from module list
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    if-nez v7, :goto_return
+
+    invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    move-result-object v8
+
+    :loop
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+    move-result v9
+    if-eqz v9, :goto_return
+
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object v9
+    check-cast v9, Lme/weishu/exp/persistence/XposedModule;
+
+    # Get package name
+    iget-object v1, v9, Lme/weishu/exp/persistence/XposedModule;->packageName:Ljava/lang/String;
+
+    # Get or create list for this package
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v2
+    check-cast v2, Ljava/util/List;
+
+    if-nez v2, :goto_add
+    new-instance v2, Ljava/util/ArrayList;
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_add
+    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :loop
+
+    :goto_return
+    :try_end
+    .catch Ljava/lang/Exception; {:try_start .. :try_end} :catch_all
+
+    return-object v0
+
+    :catch_all
+    move-exception v1
     new-instance v0, Ljava/util/HashMap;
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
     return-object v0
@@ -2832,13 +2898,25 @@
     return v0
 .end method
 
-.method public static native u(Ljava/lang/Object;Z)Z
+.method public static u(Ljava/lang/Object;Z)Z
+    .locals 1
+    # kkkzheli: bypass - module enable check
+    const/4 v0, 0x1
+    return v0
 .end method
 
-.method public static native v(Ljava/lang/Object;Ljava/lang/Object;Z)Z
+.method public static v(Ljava/lang/Object;Ljava/lang/Object;Z)Z
+    .locals 1
+    # kkkzheli: bypass
+    const/4 v0, 0x1
+    return v0
 .end method
 
-.method public static native w(Ljava/lang/Object;)Ljava/lang/String;
+.method public static w(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 1
+    # kkkzheli: bypass - return empty string
+    const-string v0, ""
+    return-object v0
 .end method
 
 .method public static waitForState(Landroid/content/Context;)V
