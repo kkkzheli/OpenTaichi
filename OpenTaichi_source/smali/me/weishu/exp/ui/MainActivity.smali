@@ -8387,11 +8387,18 @@
 .method private synthetic nmmmmnnnmmmmnmnmmmmnmmmnmnnmmnmmmmnmmm()V
     .locals 3
 
-    # kkkzheli: launch SelectAppActivity for APK import
+    # kkkzheli: direct GET_CONTENT for APK import
     new-instance v0, Landroid/content/Intent;
-    const-class v1, Lme/weishu/exp/ui/SelectAppActivity;
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-    const/16 v1, 0x64
+    const-string v1, "android.intent.action.GET_CONTENT"
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "application/vnd.android.package-archive"
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "android.intent.category.OPENABLE"
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    const/16 v1, 0x66
     invoke-virtual {p0, v0, v1}, Lme/weishu/exp/ui/MainActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     return-void
